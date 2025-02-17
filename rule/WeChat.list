@@ -36,6 +36,8 @@ DOMAIN-SUFFIX,wx.qq.com
 DOMAIN-SUFFIX,wxapp.tc.qq.com
 DOMAIN-SUFFIX,wxs.qq.com
 DOMAIN-SUFFIX,yun-hl.3g.qq.com
+DOMAIN-SUFFIX,tencent.mm
+DOMAIN-SUFFIX,com.tencent.mm
 IP-ASN,132203,no-resolve
 DOMAIN,com.tencent.mm
 DOMAIN-KEYWORD,tencent
