@@ -6,6 +6,10 @@
 # DOMAIN-SUFFIX: 22
 # IP-ASN: 1
 # TOTAL: 31
+
+# civitai下载直连
+DOMAIN-SUFFIX,r2.cloudflarestorage.com
+
 DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
 DOMAIN,btrace.qq.com
 DOMAIN,dldir1.qq.com
