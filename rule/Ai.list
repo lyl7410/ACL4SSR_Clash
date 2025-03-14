@@ -31,6 +31,11 @@ DOMAIN,gemini.google.com
 DOMAIN-SUFFIX,aistudio.google.com
 DOMAIN-SUFFIX,googleapis.com
 
+# ======== grok AI服务 ========
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,x.ai
+
 # ======== 第三方依赖服务 ========
 DOMAIN-SUFFIX,cdn.auth0.com
 DOMAIN-SUFFIX,opendns.com
