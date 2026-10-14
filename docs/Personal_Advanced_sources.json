@@ -1,51 +1,51 @@
 {
   "date": "2026-10-15",
-  "revision": "edgetunnel-source-transport-client-preserves-nodes",
-  "base_commit": "5320da15273a2a6e6969b7757cb229899ebadb8c",
+  "revision": "quota-civitai-900-manual-regions",
+  "base_commit": "2140b89a37c790632382e93ca0bfc245c54dfe49",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/2140b89a37c790632382e93ca0bfc245c54dfe49/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
@@ -1038,6 +1038,22 @@
   ],
   "groups": [
     {
+      "name": "🚀 节点选择",
+      "type": "select",
+      "refs": [
+        "♻️ 自动选择",
+        "🖐️ 手动切换",
+        "🔄 故障转移",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇭🇰 香港节点",
+        "DIRECT"
+      ],
+      "regex": null
+    },
+    {
       "name": "🖐️ 手动切换",
       "type": "select",
       "refs": [
@@ -1092,6 +1108,14 @@
       "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
     },
     {
+      "name": "🇺🇲 美国节点",
+      "type": "select",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇺🇸|🇺🇲|美国|美國|洛杉矶|西雅图|圣何塞|硅谷|达拉斯|芝加哥|波特兰|凤凰城|亚特兰大|纽约|(?:^|[^A-Za-z0-9])(?:US[0-9]*|USA|United[ _-]?States|LAX|SFO|SEA|SJC|SV|DFW|ORD|PDX|PHX|ATL|NYC|EWR|IAD)(?:$|[^A-Za-z0-9])).*$"
+    },
+    {
       "name": "📦 模型下载",
       "type": "select",
       "refs": [
@@ -1119,22 +1143,6 @@
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
         "🇭🇰 香港节点"
-      ],
-      "regex": null
-    },
-    {
-      "name": "🚀 节点选择",
-      "type": "select",
-      "refs": [
-        "♻️ 自动选择",
-        "🖐️ 手动切换",
-        "🔄 故障转移",
-        "🇺🇲 美国节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "🇹🇼 台湾节点",
-        "🇭🇰 香港节点",
-        "DIRECT"
       ],
       "regex": null
     },
@@ -1193,59 +1201,36 @@
       "regex": null
     },
     {
-      "name": "🇺🇲 美国节点",
-      "type": "url-test",
-      "refs": [
-        "🖐️ AI手动切换"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇺🇸|🇺🇲|美国|美國|洛杉矶|西雅图|圣何塞|硅谷|达拉斯|芝加哥|波特兰|凤凰城|亚特兰大|纽约|(?:^|[^A-Za-z0-9])(?:US[0-9]*|USA|United[ _-]?States|LAX|SFO|SEA|SJC|SV|DFW|ORD|PDX|PHX|ATL|NYC|EWR|IAD)(?:$|[^A-Za-z0-9])).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 100
-    },
-    {
       "name": "🇯🇵 日本节点",
-      "type": "url-test",
+      "type": "select",
       "refs": [
         "🖐️ AI手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇯🇵|日本|东京|大阪|埼玉|川日|泉日|沪日|深日|(?:^|[^A-Za-z0-9])(?:JP[0-9]*|Japan|NRT|KIX|TYO)(?:$|[^A-Za-z0-9])).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇯🇵|日本|东京|大阪|埼玉|川日|泉日|沪日|深日|(?:^|[^A-Za-z0-9])(?:JP[0-9]*|Japan|NRT|KIX|TYO)(?:$|[^A-Za-z0-9])).*$"
     },
     {
       "name": "🇸🇬 狮城节点",
-      "type": "url-test",
+      "type": "select",
       "refs": [
         "🖐️ AI手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇸🇬|新加坡|狮城|(?:^|[^A-Za-z0-9])(?:SG[0-9]*|Singapore|SIN)(?:$|[^A-Za-z0-9])).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇸🇬|新加坡|狮城|(?:^|[^A-Za-z0-9])(?:SG[0-9]*|Singapore|SIN)(?:$|[^A-Za-z0-9])).*$"
     },
     {
       "name": "🇹🇼 台湾节点",
-      "type": "url-test",
+      "type": "select",
       "refs": [
         "🖐️ AI手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇹🇼|台湾|台灣|台北|新北|彰化|(?:^|[^A-Za-z0-9])(?:TW[0-9]*|Taiwan|TPE)(?:$|[^A-Za-z0-9])).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇹🇼|台湾|台灣|台北|新北|彰化|(?:^|[^A-Za-z0-9])(?:TW[0-9]*|Taiwan|TPE)(?:$|[^A-Za-z0-9])).*$"
     },
     {
       "name": "🇭🇰 香港节点",
-      "type": "url-test",
+      "type": "select",
       "refs": [
         "🖐️ 手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong)(?:$|[^A-Za-z0-9])).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong)(?:$|[^A-Za-z0-9])).*$"
     },
     {
       "name": "♻️ 自动选择",
@@ -1253,9 +1238,9 @@
       "refs": [
         "🖐️ 手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(civitai).*$",
       "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
+      "interval": 900,
       "tolerance": 50
     },
     {
@@ -1264,9 +1249,9 @@
       "refs": [
         "🖐️ 手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(civitai).*$",
       "url": "http://www.gstatic.com/generate_204",
-      "interval": 120,
+      "interval": 900,
       "tolerance": 50
     }
   ],
@@ -1486,5 +1471,16 @@
     "client_transport_changes": "removed; node fields preserved",
     "actual_user_deployment_modified": false,
     "backend_conversion_probe": "HTTP 403; actual output not verified"
+  },
+  "quota_policy": {
+    "node_filter": "case-insensitive civitai substring; exclude UK labels",
+    "interval_seconds": 900,
+    "lazy": true,
+    "regions": "manual select",
+    "visible_groups": 20,
+    "groups_after_script": 22,
+    "provider_default_health_check": "disabled with empty URL and zero interval",
+    "empty_pool": "explicit manual selection; never resume all-node checks",
+    "runtime_test": "200 synthetic localhost nodes; test clock compressed to 2 seconds; no real CF traffic"
   }
 }

@@ -1,13 +1,13 @@
 # Clash 个人高阶分流与大文件下载配置
 
-版本：2026-10-15，20 组精简与自由排序版。面向 Clash Verge Rev / Mihomo，采用服务分组、地区自动选择与一个共享故障转移池，通用业务直接使用已核实的 MetaCubeX、ACL4SSR、blackmatrix7 上游规则，个人部分仅保留四份按策略整理的例外。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
+版本：2026-10-15，Cloudflare 额度节省版。面向 Clash Verge Rev / Mihomo，采用 20 个可见服务/手动入口、五地区手动选择，以及两个隐藏的 civitai 检测池，通用业务直接使用已核实的 MetaCubeX、ACL4SSR、blackmatrix7 上游规则，个人部分仅保留四份按策略整理的例外。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
 
 ## 文件入口
 
 - [Personal_Advanced.ini](../Clash/config/Personal_Advanced.ini)：订阅转换模板。
 - [Personal_Advanced_override.yaml](../Clash/config/Personal_Advanced_override.yaml)：Mihomo YAML 覆写片段，含 DNS、Fake-IP 豁免、保活和嗅探。
 - [Personal_Advanced_base.yaml](../Clash/config/Personal_Advanced_base.yaml)：转换底稿，已包含覆写参数；INI 的 clash_rule_base 使用它。
-- [Personal_Advanced_node_tuning.js](../Clash/config/Personal_Advanced_node_tuning.js)：Verge 订阅脚本，保留 AI 规则优先级并处理缺地区回退；不再修改节点传输参数，历史文件名保留。
+- [Personal_Advanced_node_tuning.js](../Clash/config/Personal_Advanced_node_tuning.js)：Verge 订阅脚本，保留 AI 规则优先级、关闭 provider 全量健康检查并建立限定范围检测池；不修改节点传输参数，历史文件名保留。
 - [Personal_Advanced_sources.json](Personal_Advanced_sources.json)：跟踪分支 URL、本次审查提交、SHA-256、个人条目覆盖记录、分组与顺序。
 - [Personal_Advanced_validation.json](Personal_Advanced_validation.json)：本地解析、实际转换、分组隔离与路由检查结果。
 - [rule/Personal/](../rule/Personal/)：仅含 ModelDownload、R2Direct、Direct、Proxy 四份个人例外。
@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/Clash/config/Person
 2. 转换接口参数为 `target=clash`、`url=<机场订阅 URL>`、`config=<INI 直链>`；参数要 URL 编码。转换器还必须能下载 INI 引用的基础 YAML、个人例外列表和上游分支的公共列表。
 3. 将转换后的 YAML 导入 Clash Verge Rev。首次确认 `🤖 AI` 默认美国、`⚡ R2直连加速` 默认 DIRECT、`📦 模型下载` 默认通用故障转移。
 4. 转换结果已经通过 base.yaml 带上 override 参数。如果客户端会重写 DNS 等字段，或使用自己的转换底稿，在该订阅的 **YAML 合并/覆写编辑器** 应用 override.yaml，并检查最终运行配置。不要把 YAML 粘贴到 JavaScript 脚本编辑器。
-5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理 AI 规则优先级、地区回退以及 provider 手动池的空池行为。先按 [edgetunnel 源头设置与单节点验证](EdgeTunnel_Setup.md) 关闭源头 Early Data，再换用新版脚本；节点传输设置由源头负责。
+5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理 AI 规则优先级、provider 空池行为和本次额度节省逻辑。完整实现必须同时使用新版 INI 和脚本；仅用 INI 仍可能探测手动回退节点或 provider 全量节点。先按 [edgetunnel 源头设置与单节点验证](EdgeTunnel_Setup.md) 关闭源头 Early Data，再换用新版脚本；节点传输设置由源头负责。
 6. 先测试系统代理，再在 Verge 中以必要的服务/管理员权限启用 TUN。底稿默认 TUN 关闭；单纯设置进程规则不代表应用所有流量已被接管。
 
 Clash Verge Rev 的编辑器名称随版本不同。YAML 片段走 Merge，`function main(config)` 代码走 Script。出现脚本错误时，客户端可能沿用旧配置，必须核对最终配置及日志。OpenClash 应将字段合并进完整运行 YAML 或其相应自定义覆写机制，不能假定导入 INI 已设置路由器系统 DNS、透明代理或权限。
@@ -66,21 +66,33 @@ GitHub 的分离是按**目标域名**完成：github.com 普通页面走节点�
 
 AI 默认美国，候选为美、日、新、台和一个 AI 安全手动入口。不再复制 AI 优选、AI 自动、AI 故障转移等底层组，也不引用包含香港的普通节点选择/手动/故障转移池。
 
-订阅全部是 Cloudflare 搭建，因此“优选与自建”没有区分作用，已全部移除。普通业务与模型共用一个 `🔄 故障转移` 池；不能凭“CF/优选”的名字认定某节点性能更好。面板最前依次是普通手动、油管、谷歌、AI、AI手动、模型下载、R2、节点选择；次要业务随后，地区与测速池沉底。总计 20 组，AI 专用分组只保留业务入口和安全手动入口。
+订阅全部是 Cloudflare 搭建，因此不再另设“优选与自建”分组。保留 GitHub 当前面板顺序：节点选择、普通手动、油管、谷歌、AI、AI手动、美国、模型下载、R2，随后为次要业务与其余地区入口。脚本不重新排序这些入口。
 
-普通/模型池及香港组排除英国；美/日/新/台和 AI 手动池额外排除香港。检测 UK/GB/London、中文、国旗及沪英/深英等转发标签，也支持“自建HK01”这种中文连写的标签。正则使用 ASCII 字母数字边界，避免 Unicode 单词边界或转换转义造成代码漏匹配。名字过滤仍不能证明真实出口国家，应验证实际 egress。
+普通/模型池及香港组排除英国；美/日/新/台和 AI 手动池额外排除香港。检测 UK/GB/London、中文、国旗及沪英/深英等转发标签，也支持中文连写的 HK01 标签。名字不能证明真实出口国家，仍需验证实际出口。SEA 按你的确认默认美国，不归入新加坡。
 
-SEA 按你的确认默认美国，未放进新加坡。美国补齐圣何塞、硅谷、达拉斯、芝加哥、波特兰、凤凰城、亚特兰大、纽约及 SJC/DFW/ORD/PDX/PHX/ATL 等；日本增加 TYO/埼玉/沪日/深日，台湾增加台北/新北/彰化。五个地区组共享使用，无英国和其他冷门地区组。
+五地区全部改为手动 select，保留原筛选和安全回退：美/日/新/台回退 AI 手动，香港回退普通手动。这些地区组不再自行定时测速。provider 配置中手动回退可能排在地区实际节点前，需要锁区时直接选已验证的对应地区节点。
 
-地区 url-test 为 300 秒，亚太容差 50ms，美国 100ms；通用 fallback 为 120 秒。测试地址按照规划使用 `http://www.gstatic.com/generate_204`。测通该地址只证明探测连接，不代表 AI 可用、流媒体解锁或大文件传输无故障。
+AI 不引用普通自动、故障转移或普通手动，继续保持港英隔离。Mihomo v1.19.32 的 empty-fallback 只能使用合法的内置策略，不能指定其他策略组；脚本对动态手动池使用 empty-fallback:REJECT。所有安全节点都不可用时应拒绝流量，不能承诺绝不断网。
 
-测速组不再直接混入 REJECT。INI 中美/日/新/台回退 AI 手动池，香港及全量自动回退普通手动池。REJECT 保留在底层手动池或作为原生空池拒绝策略，不以 DIRECT 破坏 AI 隔离。
+## Cloudflare 额度节省：只检测常用节点
 
-配套脚本对静态节点：该地区有实际节点时移除手动测速候选，缺地区时保留手动回退。对动态 provider：扩展运行时不知道 provider 更新后的节点集合，保留安全手动候选，因此它会参与测速，可能选择另一允许地区。地区名此时不是唯一出口地区保证；需要锁美区时直接选已验证的美国节点。
+自动选择和故障转移都泛匹配节点名中的 **civitai，忽略大小写**，继续排除英国标签。civitai、civitai2、CIVITAI US01、my-civitai-download 都可匹配，不限两条固定名称；香港允许在普通自动/模型池中使用，AI 隔离仍单独保持。约 200 条订阅节点仍保留在普通手动入口（英国标签继续排除），不会因本次优化从订阅删除。
 
-Mihomo v1.19.32 禁止 empty-fallback 指向策略组，不能填写“AI手动切换”来实现只在空池时跳组。脚本对 provider 手动池移除作为常驻候选的 REJECT，并使用合法的 empty-fallback:REJECT，保证有可用节点时不会默认停在拒绝。所有安全池都空/失效时仍应拒绝，而不是承诺“绝不断网”或回退受限节点。
+两组均使用 `http://www.gstatic.com/generate_204`、900 秒间隔、lazy:true。地区手动池不再运行自动检测。测速成功只说明探测地址可达，不保证 AI、视频或模型下载可用。
 
-url-test/fallback 可能在新连接上切换出口。已有 TCP 连接不能无缝迁移到另一节点；120 秒探测也不能自动恢复过期签名 URL。账号登录与长下载需要稳定出口时，直接选固定真实节点，并由应用执行续传/重试。更大的容差只减少因延迟波动切换的概率。
+脚本为每个动态名称的 proxy-provider 关闭默认健康检查，并清空其默认测速 URL、设 interval:0，保留节点来源、下载更新设置和传输参数。仅设置 enable:false 不足以避免当前核心在组注册检测任务后沿用默认 URL 全量探测。
+
+实际运行结构是 **20 个可见入口 + 2 个 hidden:true 的内部检测池**。两个可见入口保留原名和位置，但成为 select：第一项为对应内部检测池，第二项为普通手动。隐藏的 url-test/fallback 只检测符合 civitai 筛选的节点，不包含手动回退组。否则核心也会顺带测速手动池当前选中的冷门节点。支持 hidden 的客户端会隐藏内部卡片；若版本仍显示，勿将这两个内部组改为全量候选。
+
+**没有匹配节点时，在“自动选择”或“故障转移”入口内主动选择“手动切换”**，再选其他节点。内部空池拒绝，不自动恢复全量扫描，也不自动回退 DIRECT。已经保存的手动选择可能被客户端保留；有匹配节点后需主动切回内部检测池。
+
+单套持续运行的检测任务，每天理论探测量约为 **匹配数 × 96**。匹配 10 条约 960 次；若 200 条名称全含 civitai，则仍检测 200 条，主要节省来自延长间隔。两个组不能简单承诺只算一套：provider 同 URL 任务可能合并，静态节点、多个 provider、重试、启动检测、手动测速和其他设备会改变总量。lazy 在池被使用时才维持周期检查，启动仍可能有初次检测。
+
+Cloudflare 普通 Workers WebSocket 的初始 Upgrade 请求计入请求额度，同一连接内的数据消息不逐条作为新请求计数。因此这里减少的是测速引起的连接建立；网页、DNS、真实业务连接和重连仍消耗额度。免费额度通常为账户每日 100,000 请求，UTC 零点重置（北京时间 08:00），并非每个节点单独十万。配置不能保证账户总请求量不超限。
+
+不要在 Verge 点全量测速来验证节省效果，这会主动检测大量节点。订阅更新建议在 Verge 该订阅“编辑信息”中确认 **1440 分钟**，脚本和 900 秒测速间隔不会替你修改这一客户端设置。
+
+自动选择/故障转移只影响后续连接，不能把已有 TCP 流无缝迁移。AI 会话与长下载需要稳定出口时，手动固定节点；失败后续传仍由应用负责。
 
 ## Civitai：鉴权与传输分离
 
@@ -117,7 +129,7 @@ Sniffer 启用 parse-pure-ip，HTTP 覆盖 80、8080-8880，TLS/QUIC 覆盖 443/
 
 按当前讨论采用普通 WebSocket、不主动启用 sing-mux 的保守基线。已核实源头是 cmliu/edgetunnel，关闭面板的“启用0-RTT(ed=2560)”并检查 PATH 内没有手工残留的 ed 参数；原路径中的鉴权、proxyip 等其他内容必须保留。具体操作和单节点检查见 [EdgeTunnel_Setup.md](EdgeTunnel_Setup.md)。
 
-新版配套 JS 已移除按名称识别 CF、自建、clone 并改写节点的逻辑，所有节点字段原样保留，适用于名称为 civitai1 等场景，也避免误以为它能改写远程 provider。AI 规则前置和缺地区回退仍保留。历史文件名 node_tuning.js 为兼容已有链接暂不改名。
+新版配套 JS 已移除按名称识别 CF、自建、clone 并改写节点的逻辑，所有节点字段原样保留，适用于名称为 civitai1 等场景，也避免误以为它能改写远程 provider。AI 规则前置、手动空池保护及限定范围检测仍保留。历史文件名 node_tuning.js 为兼容已有链接暂不改名。
 
 当前源代码生成的普通 VLESS/Trojan URI 没有主动启用 Mihomo sing-mux；没有 smux 配置不等于必须补一份强制关闭脚本。若实际转换结果出现 smux.enabled:true，需在转换源或后端修正，当前 INI 没有通用的批量节点字段覆写功能。SS/v2ray-plugin 的 mux 与 sing-mux 不是同一字段，应另行检查，不能套用 VLESS 步骤。
 
@@ -147,7 +159,7 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、35 个域名/进程/回环样例、转换 YAML + 合并 override + 源节点字段保留输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
 
-没有真实机场凭据。使用的节点为 127.0.0.1:9 占位，未发出真实代理流量。此前 5386ff4 版本已通过本机核心 API 检查动态 provider 成员、SEA 归属、AI/模型隔离和缺地区回退；本机 HTTP 对照测试中 REJECT 返回测速失败，DIRECT 测得 1ms。这不是真实节点的延迟测量。
+本轮使用 200 条合成节点，并以本地 HTTP 隧道记录真实 Mihomo 发出的探测。静态自动、provider 自动/故障转移和两种空匹配场景均通过：仅四条允许的 civitai 节点被探测，英国及其他冷门节点未被探测；空匹配后显式选手动可访问本地模拟业务，仍无健康探测。配置断言为 900 秒；为观察重复计时与 lazy 行为，仅在测试副本把周期压缩为 2 秒，停止业务后未继续探测。没有等待完整的 900 秒生产周期，也未测试真实 Cloudflare 额度变化。
 
 未验证真实服务支持地区、网站访问、R2 直连速度、断点续传、Hosts IP、DNS 出口、实际 TUN 或路由器配置。
 
@@ -165,11 +177,11 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 ## 手动入口与常用业务顺序
 
-面板卡片顺序为：**普通手动 → 油管 → 谷歌 → AI → AI手动 → 模型下载 → R2 → 节点选择**。这是线性声明顺序；实际每行列数由客户端窗口宽度决定。
+保留当前仓库面板卡片顺序：**节点选择 → 普通手动 → 油管 → 谷歌 → AI → AI手动 → 美国 → 模型下载 → R2**，其余入口随后。这是线性声明顺序；实际每行列数由客户端窗口宽度决定。
 
 主要业务组里的手动选项移到第二位，首位默认值保持原状：视频默认节点选择、谷歌/AI 默认美国、模型默认故障转移、R2 默认 DIRECT。AI 的第二项仍是过滤后的 AI 手动池，不接入普通手动池。
 
-配套 JS 从 2026-10-15 起不再强制重排面板和业务 select 候选：排序由 INI 决定，避免自定义行序被脚本覆盖。必须同时更新 INI 和脚本并重新转换；仅更新脚本不会删除旧 YAML 中的三个服务组。脚本仍处理缺地区回退、provider 手动池 REJECT 常驻项和 AI 核心域名保障。已存选择可能按原组名保留，因此候选第一项是首次默认值，不一定覆盖你之前保存的选择。
+配套 JS 从 2026-10-15 起不再强制重排面板和业务 select 候选：排序由 INI 决定，避免自定义行序被脚本覆盖。必须同时更新 INI 和脚本并重新转换；仅更新脚本不会删除旧 YAML 中的三个服务组。脚本处理 provider 手动空池、限定检测范围和 AI 核心域名保障；只追加两个隐藏池。已存选择可能按原组名保留，因此候选第一项是首次默认值，不一定覆盖你之前保存的选择。
 
 值得继续优化的项目：
 
@@ -227,7 +239,7 @@ INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic
 
 通用业务直接修改上游选型或更新转换结果，无需在本仓库维护 Google、Spotify、Twitter、AI 的复制品。Holodex 仅保留一条内联规则，避免为单个域名再建一个文件。四条 OpenAI 内联规则和脚本前置保障继续保留，用于远程 AI 清单加载异常时的核心域名回退。
 
-总计 41 条 ruleset 声明、20 个策略组；本次快照转换后 15,456 条规则。条目总数会随上游分支更新而变化。四份个人列表使用标准无策略列 .list 格式，不能将不同目标策略随意合并成一个文件。
+总计 41 条 ruleset 声明、INI 中 20 个策略组（脚本增加两个隐藏检测池）；本次快照转换后 15,456 条规则。条目总数会随上游分支更新而变化。四份个人列表使用标准无策略列 .list 格式，不能将不同目标策略随意合并成一个文件。
 
 ## 微软、苹果、Spotify 与自定义排序（2026-10-15）
 
@@ -241,7 +253,7 @@ Spotify 清单继续直接引用 blackmatrix7，目标改为国际媒体，删�
 2. 调整同一 select 行内的候选：改变候选显示顺序和首次默认项。保留 AI 组的隔离关系；不要把普通手动、香港或普通节点选择加入 AI 候选。fallback 的成员顺序影响故障转移优先级，也不只是显示调整。
 3. 调整 `ruleset=` 行：改变实际匹配优先级，不能按面板喜好随意移动。AI 必须先于通用 Google/媒体，R2 必须先于模型域名/进程规则，国内泛直连和 FINAL 保持末尾。
 
-修改组名需同步所有候选、ruleset、DNS policy 和脚本引用，单纯移动行无需改名。脚本已验证保留逆序面板和自定义业务候选顺序；底层手动 provider 池的 REJECT 处理及测速池回退仍是必要的语义调整。
+修改组名需同步所有候选、ruleset、DNS policy 和脚本引用，单纯移动行无需改名。脚本已验证保留逆序面板和自定义业务候选顺序；底层手动 provider 池的 REJECT 处理、检测池与手动恢复入口仍是必要的语义调整。
 
 当前建议保持二十组结构，不增加负载均衡池。Holodex 与 YouTube 共用视频组；AI 和模型下载优先固定稳定出口。普通手动池同时被油管、谷歌、模型引用时，修改该池选中节点会同时影响这些业务；需要独立出口时先在各业务组选择不同地区或直接挂载已验证节点，不必复制一套自动池。
 
@@ -250,3 +262,16 @@ Spotify 清单继续直接引用 blackmatrix7，目标改为国际媒体，删�
 模型下载组现在直接列出节点名含 civitai 的订阅节点，大小写不敏感，例如 civitai1、civitai2、CIVITAI US01。仍按原有正则排除英国名称标签，香港允许用于模型下载。原故障转移默认项、手动入口和地区候选保留，匹配节点追加为可直接选择的候选，不会仅因名称匹配自动改选；名称也不代表速度或真实出口。无匹配节点时原候选继续可用，不新增分组。已用名称样例、空匹配订阅及 Mihomo 检查验证。
 
 INI 注释现按实际用途分成十段：本地连接和网站验证、拦截广告、AI 服务、下载模型、看直播/谷歌/聊天/音乐、开发网站和其他国外视频、通常直接连接的服务、其他需要代理的网站、国内网站和国内 IP、最后剩下的连接。每段说明它处理什么；只改变注释与空行，已逐行核对所有配置项、规则和策略组及其顺序完全一致。
+
+## 额度节省版本的客户端验收
+
+1. 重新转换 INI（刷新转换缓存），同时替换订阅 JavaScript 脚本并保存。无需改节点凭据或 Cloudflare 面板。仅重载旧转换 YAML 不会更新模板。
+2. 查看最终运行配置：五地区为 select；仅两个内部组为 url-test/fallback，interval:900、lazy:true、相同 URL，filter 含 civitai 与英国排除条件。
+3. 如有 proxy-providers，逐个确认 health-check.enable:false、url 为空、interval:0；内部组的 use 应保留实际动态 provider 名称。其他扩展若重新写回健康检查，需要调整执行顺序，最后核对最终配置。
+4. 检查普通手动仍有原订阅的非英国节点，AI 手动及四个安全地区不含港英标签。确认业务、R2 默认 DIRECT、广告及 DNS 未被其他扩展覆盖。
+5. 只使用自动组中的常用节点，观察延迟历史；冷门非 civitai 节点不应出现周期测速记录。需要全量人工测试时可主动执行，但会额外消耗请求。
+6. 用本地订阅副本移除所有合法 civitai 名称：自动入口应保留手动候选，主动切到手动后能选其他节点，且不恢复全量定时检测。完成后切回正常订阅。
+
+本次已通过实际 SubConverter-Extended 转换、15,456 条规则一致性检查、35 个路由样例、策略/DNS 引用与 AI 隔离、脚本重复执行及节点字段保留、Mihomo 配置检查，以及上述本地模拟运行检测。未操作用户客户端或面板，未以真实节点实测联网和每日额度。
+
+依据：[Mihomo v1.19.32 healthcheck 实现](https://github.com/MetaCubeX/mihomo/blob/v1.19.32/adapter/provider/healthcheck.go)、[Workers 计费](https://developers.cloudflare.com/workers/platform/pricing/)、[Workers 限额](https://developers.cloudflare.com/workers/platform/limits/)。

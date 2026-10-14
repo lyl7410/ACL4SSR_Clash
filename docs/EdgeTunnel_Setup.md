@@ -33,7 +33,7 @@ SS/v2ray-plugin 还有另一种 mux，不能与 Mihomo sing-mux 混为一谈；�
 
 1. 将当前能用的完整配置另存为本地测试配置，关闭测试配置自动更新。找到一个 VLESS/Trojan、network:ws 的节点，复制并改名，例如 `civitai2-普通WS测试`。保留原节点用于恢复。
 2. 只修改测试副本：设 smux.enabled:false；在 ws-opts.path 中只删除 ed 查询参数；设 max-early-data:0；移除 early-data-header-name。UUID/密码、server、port、TLS、servername、Host、路径主体及其他查询参数全部保持原样。如果没有 smux 或 early-data 字段，原本就是关闭状态，无需补齐。
-3. 将测试节点加入所测业务组的候选，并 **直接选中测试节点**，不要选自动测速、故障转移或 DIRECT。如果测试 AI，确认它是真实允许地区的节点；名字不会改变实际出口。新版 JS 不会改写这个测试节点。
+3. 将测试节点加入所测业务组的候选，并 **直接选中测试节点**，不要选自动测速、故障转移或 DIRECT。如果测试 AI，确认它是真实允许地区的节点；名字不会改变实际出口。新版 JS 不会改写这个测试节点，但会按名称限定自动测速范围；直接手动选中不受该范围限制。
 4. 先运行一次延迟测试，再打开 YouTube 或 Holodex 的实际直播。到 Verge 连接页确认新连接链路的最后一个节点确实是测试副本，避免回退或旧连接造成误判。只看到测试延迟不能判定全部可用，某些 Worker 有本地测速应答逻辑。
 5. 能通过这个节点加载外部网页并持续收发数据，说明普通 WebSocket 握手、节点鉴权和所测目标的数据转发已经成功。进一步观察 10–20 分钟直播，并对比你原来会断开的场景；这只说明测试期间可用，不保证长期不掉线。
 6. 若仍断开，切回同一个原节点，在相同目标、相同 DNS 和相近时间下对比。不要同时修改 DNS、TUN、IP、订阅更新频率等多个变量。若关闭后立即不能用，先恢复原配置并检查源头版本、Host/SNI/PATH 与服务端日志。
@@ -60,3 +60,5 @@ SS/v2ray-plugin 还有另一种 mux，不能与 Mihomo sing-mux 混为一谈；�
 - [Cloudflare WebSockets](https://developers.cloudflare.com/workers/runtime-apis/websockets/)：升级、message 和 WebSocket 生命周期。
 
 已完成源码审查与本仓库本机转换/核心检查。尚未测试用户真实节点、后台开关状态、转换后端实际输出、直播或 Codex 连接。
+
+当前配套脚本另外负责额度节省：关闭 provider 默认全量健康检查、建立 900 秒 civitai 隐藏检测池、保留 AI 前置保障。即使节点源头已是普通 WS，完整额度节省仍需使用此脚本。详见 [主说明](Personal_Advanced.md)。
