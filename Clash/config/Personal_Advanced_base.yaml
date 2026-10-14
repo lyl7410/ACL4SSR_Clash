@@ -1,0 +1,94 @@
+mixed-port: 7890
+mode: rule
+allow-lan: false
+log-level: info
+tun:
+  enable: false
+  stack: mixed
+  auto-route: true
+  auto-detect-interface: true
+  strict-route: true
+  dns-hijack:
+  - any:53
+find-process-mode: strict
+tcp-concurrent: true
+unified-delay: true
+keep-alive-idle: 15
+keep-alive-interval: 15
+ipv6: false
+profile:
+  store-selected: true
+  store-fake-ip: true
+hosts: {}
+dns:
+  enable: true
+  ipv6: false
+  use-hosts: true
+  use-system-hosts: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+  - +.lan
+  - +.local
+  - +.home.arpa
+  - +.msftconnecttest.com
+  - +.msftncsi.com
+  - +.civitai.com
+  - +.civitai.red
+  - +.civitai.delivery
+  - +.civitai.tv
+  - +.civitai.link
+  - +.r2.cloudflarestorage.com
+  - +.huggingface.co
+  - +.hf.co
+  - +.hf.space
+  - +.xethub.hf.co
+  - +.githubusercontent.com
+  - +.download.pytorch.org
+  default-nameserver:
+  - 223.5.5.5
+  - 119.29.29.29
+  proxy-server-nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  nameserver:
+  - https://dns.alidns.com/dns-query
+  - https://doh.pub/dns-query
+  nameserver-policy:
+    +.openai.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.chatgpt.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.anthropic.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.claude.ai: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.gemini.google.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.generativelanguage.googleapis.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.civitai.com: https://1.1.1.1/dns-query#📦 模型下载
+    +.civitai.red: https://1.1.1.1/dns-query#📦 模型下载
+    +.huggingface.co: https://1.1.1.1/dns-query#📦 模型下载
+    +.hf.co: https://1.1.1.1/dns-query#📦 模型下载
+    +.civitai.delivery:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.r2.cloudflarestorage.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+sniffer:
+  enable: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports:
+      - 80
+      - 8080-8880
+      override-destination: false
+    TLS:
+      ports:
+      - 443
+      - 8443
+      override-destination: false
+    QUIC:
+      ports:
+      - 443
+      - 8443
+      override-destination: false

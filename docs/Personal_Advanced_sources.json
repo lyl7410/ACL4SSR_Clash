@@ -1,0 +1,1277 @@
+{
+  "date": "2026-10-14",
+  "base_commit": "effbc4373940c5b9c0e34d232bb772bc9ce194c2",
+  "sources": [
+    {
+      "name": "personal/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/Ai.list",
+      "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
+    },
+    {
+      "name": "personal/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/civitai.list",
+      "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
+    },
+    {
+      "name": "personal/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/direct.list",
+      "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
+    },
+    {
+      "name": "personal/Google Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/Google%20Gemini.list",
+      "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
+    },
+    {
+      "name": "personal/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/google.list",
+      "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
+    },
+    {
+      "name": "personal/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/spotify.list",
+      "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
+    },
+    {
+      "name": "personal/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/twitter.list",
+      "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
+    },
+    {
+      "name": "personal/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/vpn.list",
+      "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
+    },
+    {
+      "name": "personal/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/WeChat.list",
+      "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
+    },
+    {
+      "name": "ACL/BanAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanAD.list",
+      "sha256": "27a5f6d018d428409d8da5d9f390a46298d505ae4941bb8172f052055abe7262"
+    },
+    {
+      "name": "ACL/BanProgramAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanProgramAD.list",
+      "sha256": "35cefd7a4c01d2efa9b4c7928e21caa348f78a3f60b46d7d850f1e3334a5a766"
+    },
+    {
+      "name": "ACL/ChinaCompanyIp.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaCompanyIp.list",
+      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160"
+    },
+    {
+      "name": "ACL/ChinaDomain.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaDomain.list",
+      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08"
+    },
+    {
+      "name": "ACL/Download.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Download.list",
+      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc"
+    },
+    {
+      "name": "ACL/LocalAreaNetwork.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/LocalAreaNetwork.list",
+      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468"
+    },
+    {
+      "name": "ACL/ProxyGFWlist.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyGFWlist.list",
+      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea"
+    },
+    {
+      "name": "ACL/ProxyMedia.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyMedia.list",
+      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1"
+    },
+    {
+      "name": "ACL/Telegram.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Telegram.list",
+      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89"
+    },
+    {
+      "name": "ACL/UnBan.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/UnBan.list",
+      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa"
+    },
+    {
+      "name": "BM/Apple.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple.list",
+      "sha256": "97f7faf345fa8d269583d05533a631361fcdd49aceebceb7e38ba47633c09ab3"
+    },
+    {
+      "name": "BM/Claude.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Claude/Claude.list",
+      "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378"
+    },
+    {
+      "name": "BM/Copilot.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Copilot/Copilot.list",
+      "sha256": "12773330de34b84b7fd2f3f2af598480ea62d8574d8e9b8ae9d011a53c044d39"
+    },
+    {
+      "name": "BM/Developer.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Developer/Developer.list",
+      "sha256": "d665f274c517e512aaf7ee72eff8ade6bccfc7146be9fbc24f92707ef2a829ec"
+    },
+    {
+      "name": "BM/Gemini.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Gemini/Gemini.list",
+      "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49"
+    },
+    {
+      "name": "BM/GitHub.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GitHub/GitHub.list",
+      "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b"
+    },
+    {
+      "name": "BM/Google.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.list",
+      "sha256": "d563f32cb2c294860f4a70ccb63c9a49c3bf0fa27ff9e094f1368f2faf91595e"
+    },
+    {
+      "name": "BM/GoogleFCM.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "sha256": "9794f848f2935db94be703f797921f8c512a1ddd213c20c47c1f884dccbd82ca"
+    },
+    {
+      "name": "BM/Microsoft.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.list",
+      "sha256": "241e998fe692f1ad0cec29b66b95769bee656f4beb3b5ccd47f15b8e8935d5dc"
+    },
+    {
+      "name": "BM/Netflix.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Netflix/Netflix.list",
+      "sha256": "9ceac35682ac97d17223d90e08c4e56b52c072b1698d746a2d22444110318b57"
+    },
+    {
+      "name": "BM/OneDrive.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.list",
+      "sha256": "cf4f6b24e434b6c6033b70fc88cf7e33f5aaa0f353f6963ced770f5fa1ae6c9b"
+    },
+    {
+      "name": "BM/OpenAI.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OpenAI/OpenAI.list",
+      "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b"
+    },
+    {
+      "name": "BM/TikTok.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/TikTok/TikTok.list",
+      "sha256": "7146b733ee239b6818d496aec1640cf1e962b39cda823388ce98d83761a6c885"
+    },
+    {
+      "name": "BM/Twitter.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Twitter/Twitter.list",
+      "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97"
+    },
+    {
+      "name": "BM/YouTube.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/YouTube/YouTube.list",
+      "sha256": "a8e4819c3ee2ba71c06873769310ec012a3aa2e8fc54843168ae6edef6e75280"
+    }
+  ],
+  "changes": [
+    {
+      "source": "Ai.list",
+      "rule": "DOMAIN-SUFFIX,x.com",
+      "action": "Transferred to social/model routing so AI-first does not intercept it"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN,browser-intake-datadoghq.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN,static.cloudflareinsights.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,ai.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,algolia.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,api.statsig.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,auth0.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,events.statsigapi.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,featuregates.org",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,host.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,identrust.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,intercom.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,intercomcdn.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,launchdarkly.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,observeit.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,segment.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,sentry.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,stripe.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-SUFFIX,turn.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "DOMAIN-KEYWORD,openai",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "IP-CIDR,24.199.123.28/32,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "IP-CIDR,64.23.132.171/32,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/OpenAI.list",
+      "rule": "IP-ASN,20473,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Claude.list",
+      "rule": "DOMAIN,cdn.usefathom.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,api.msn.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,api.statsig.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,assets.msn.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,browser-intake-datadoghq.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,in.appcenter.ms",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,location.microsoft.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,odc.officeapps.live.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,r.bing.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,self.events.data.microsoft.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN,static.cloudflareinsights.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,algolia.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,api.microsoftapp.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,auth0.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,challenges.cloudflare.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,events.statsigapi.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,featuregates.org",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,host.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,identrust.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,intercom.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,intercomcdn.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,launchdarkly.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,observeit.net",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,segment.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,sentry.io",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,stripe.com",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "DOMAIN-SUFFIX,turn.livekit.cloud",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "IP-CIDR,24.199.123.28/32,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "IP-CIDR,64.23.132.171/32,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "IP-ASN,14061,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    },
+    {
+      "source": "BM/Copilot.list",
+      "rule": "IP-ASN,20473,no-resolve",
+      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
+    }
+  ],
+  "previous_personal_review": [
+    {
+      "file": "Ai.list",
+      "line": 2,
+      "before": "DOMAIN-KEYWORD,openai",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 3,
+      "before": "DOMAIN-KEYWORD,chatgpt",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 25,
+      "before": "IP-ASN,20473,no-resolve",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 32,
+      "before": "DOMAIN-SUFFIX,googleapis.com",
+      "after": "DOMAIN-SUFFIX,googleapis.com",
+      "reason": "由 google.list 中同条规则承接；精确 Gemini/YouTube API 已前置"
+    },
+    {
+      "file": "Ai.list",
+      "line": 41,
+      "before": "DOMAIN-SUFFIX,opendns.com",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 42,
+      "before": "DOMAIN-SUFFIX,intercom.io",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 43,
+      "before": "DOMAIN-SUFFIX,intercomcdn.com",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 44,
+      "before": "DOMAIN-SUFFIX,sentry.io",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 45,
+      "before": "DOMAIN-SUFFIX,stripe.com",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 46,
+      "before": "DOMAIN-SUFFIX,algolia.net",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 47,
+      "before": "DOMAIN-SUFFIX,segment.io",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 48,
+      "before": "DOMAIN-SUFFIX,launchdarkly.com",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "Ai.list",
+      "line": 51,
+      "before": "DOMAIN-SUFFIX,identrust.com",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "direct.list",
+      "line": 90,
+      "before": "PROCESS-NAME,qbittorrent*",
+      "after": "PROCESS-NAME,qbittorrent.exe",
+      "reason": "修复粘连/域名路径/无效进程通配符；qbittorrent.exe 为 Windows 可执行名"
+    },
+    {
+      "file": "Google Gemini.list",
+      "line": 9,
+      "before": "DOMAIN-KEYWORD,developerprofilesDOMAIN-KEYWORD,developerprofiles",
+      "after": "DOMAIN-KEYWORD,developerprofiles",
+      "reason": "修复粘连/域名路径/无效进程通配符；qbittorrent.exe 为 Windows 可执行名"
+    },
+    {
+      "file": "Google Gemini.list",
+      "line": 28,
+      "before": "DOMAIN-SUFFIX,generativelanguage.googleapis.com",
+      "after": "DOMAIN-SUFFIX,generativelanguage.googleapis.com",
+      "reason": "同文件完全重复，保留首次"
+    },
+    {
+      "file": "Google Gemini.list",
+      "line": 35,
+      "before": "DOMAIN-KEYWORD,google",
+      "after": "DOMAIN-KEYWORD,google",
+      "reason": "由 google.list 中同条规则承接，防止所有 Google 域名进入 Gemini"
+    },
+    {
+      "file": "google.list",
+      "line": 3,
+      "before": "DOMAIN-SUFFIX,abc.xyzDOMAIN-SUFFIX,abc.xyz",
+      "after": "DOMAIN-SUFFIX,abc.xyz",
+      "reason": "修复粘连/域名路径/无效进程通配符；qbittorrent.exe 为 Windows 可执行名"
+    },
+    {
+      "file": "spotify.list",
+      "line": 25,
+      "before": "DOMAIN-SUFFIX,spotilocal.comDOMAIN-SUFFIX,spotilocal.com",
+      "after": "DOMAIN-SUFFIX,spotilocal.com",
+      "reason": "修复粘连/域名路径/无效进程通配符；qbittorrent.exe 为 Windows 可执行名"
+    },
+    {
+      "file": "spotify.list",
+      "line": 28,
+      "before": "USER-AGENT,Spotify*",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "vpn.list",
+      "line": 27,
+      "before": "DOMAIN-SUFFIX,atom.io/packages",
+      "after": "DOMAIN-SUFFIX,atom.io",
+      "reason": "修复粘连/域名路径/无效进程通配符；qbittorrent.exe 为 Windows 可执行名"
+    },
+    {
+      "file": "vpn.list",
+      "line": 46,
+      "before": "USER-AGENT,*youtube*",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "vpn.list",
+      "line": 47,
+      "before": "USER-AGENT,YouTube*",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "vpn.list",
+      "line": 48,
+      "before": "USER-AGENT,com.google.ios.youtube*",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "vpn.list",
+      "line": 75,
+      "before": "DOMAIN-SUFFIX,kisssub.org",
+      "after": "DOMAIN-SUFFIX,kisssub.org",
+      "reason": "同文件完全重复，保留首次"
+    },
+    {
+      "file": "vpn.list",
+      "line": 76,
+      "before": "DOMAIN-SUFFIX,sankakucomplex.com",
+      "after": "DOMAIN-SUFFIX,sankakucomplex.com",
+      "reason": "同文件完全重复，保留首次"
+    },
+    {
+      "file": "vpn.list",
+      "line": 129,
+      "before": "DOMAIN-SUFFIX,byrut.org",
+      "after": "DOMAIN-SUFFIX,byrut.org",
+      "reason": "同文件完全重复，保留首次"
+    },
+    {
+      "file": "WeChat.list",
+      "line": 11,
+      "before": "DOMAIN-SUFFIX,r2.cloudflarestorage.com",
+      "after": "DOMAIN-SUFFIX,r2.cloudflarestorage.com",
+      "reason": "移至独立模型下载策略；默认 DIRECT 保留原有意图"
+    },
+    {
+      "file": "WeChat.list",
+      "line": 45,
+      "before": "IP-ASN,132203,no-resolve",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    },
+    {
+      "file": "WeChat.list",
+      "line": 47,
+      "before": "DOMAIN-KEYWORD,tencent",
+      "after": null,
+      "reason": "归档待确认，未启用"
+    }
+  ],
+  "unavailable_sources": [
+    "blackmatrix7 rule/Clash/AI/AI.list (404)",
+    "blackmatrix7 rule/Clash/HuggingFace/HuggingFace.list (404; repository tree has no HuggingFace rule directory)"
+  ],
+  "routes": [
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/LocalAreaNetwork.list",
+      "source": "ACL/LocalAreaNetwork.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/UnBan.list",
+      "source": "ACL/UnBan.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "[]DOMAIN,challenges.cloudflare.com",
+      "source": "inline"
+    },
+    {
+      "policy": "🛑 广告拦截",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanProgramAD.list",
+      "source": "ACL/BanProgramAD.list"
+    },
+    {
+      "policy": "🛑 广告拦截",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanAD.list",
+      "source": "ACL/BanAD.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/AI.list",
+      "source": "own/AI.list"
+    },
+    {
+      "policy": "⚡ R2直连加速",
+      "url": "[]DOMAIN-SUFFIX,civitai.delivery",
+      "source": "inline"
+    },
+    {
+      "policy": "⚡ R2直连加速",
+      "url": "[]DOMAIN-SUFFIX,r2.cloudflarestorage.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,civitai.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,civitai.red",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,civitai.tv",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,civitai.link",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-KEYWORD,civitai",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,digitaloceanspaces.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,backblazeb2.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,huggingface.co",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,hf.co",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,hf.space",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,xethub.hf.co",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-KEYWORD,huggingface",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,githubusercontent.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,githubassets.com",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,download.pytorch.org",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]DOMAIN-SUFFIX,lykos.ai",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/HuggingFace.list",
+      "source": "own/HuggingFace.list"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/civitai.list",
+      "source": "own/civitai.list"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]PROCESS-NAME,StabilityMatrix.exe",
+      "source": "inline"
+    },
+    {
+      "policy": "📦 模型下载",
+      "url": "[]PROCESS-NAME,StabilityMatrix",
+      "source": "inline"
+    },
+    {
+      "policy": "📹 油管视频",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/Holodex.list",
+      "source": "own/Holodex.list"
+    },
+    {
+      "policy": "📹 油管视频",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/YouTube/YouTube.list",
+      "source": "BM/YouTube.list"
+    },
+    {
+      "policy": "🔍 谷歌服务",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "source": "BM/GoogleFCM.list"
+    },
+    {
+      "policy": "🔍 谷歌服务",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/google.list",
+      "source": "own/google.list"
+    },
+    {
+      "policy": "🔍 谷歌服务",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.list",
+      "source": "BM/Google.list"
+    },
+    {
+      "policy": "📲 电报与社媒",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Telegram.list",
+      "source": "ACL/Telegram.list"
+    },
+    {
+      "policy": "📲 电报与社媒",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/Twitter-X.list",
+      "source": "own/Twitter-X.list"
+    },
+    {
+      "policy": "📲 电报与社媒",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Twitter/Twitter.list",
+      "source": "BM/Twitter.list"
+    },
+    {
+      "policy": "🎵 Spotify",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/spotify.list",
+      "source": "own/spotify.list"
+    },
+    {
+      "policy": "🚀 节点选择",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Developer/Developer.list",
+      "source": "BM/Developer.list"
+    },
+    {
+      "policy": "🚀 节点选择",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GitHub/GitHub.list",
+      "source": "BM/GitHub.list"
+    },
+    {
+      "policy": "🎬 国际媒体",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Netflix/Netflix.list",
+      "source": "BM/Netflix.list"
+    },
+    {
+      "policy": "🎬 国际媒体",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/TikTok/TikTok.list",
+      "source": "BM/TikTok.list"
+    },
+    {
+      "policy": "🎬 国际媒体",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyMedia.list",
+      "source": "ACL/ProxyMedia.list"
+    },
+    {
+      "policy": "Ⓜ️ 微软服务",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.list",
+      "source": "BM/OneDrive.list"
+    },
+    {
+      "policy": "Ⓜ️ 微软服务",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.list",
+      "source": "BM/Microsoft.list"
+    },
+    {
+      "policy": "🍎 苹果服务",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple.list",
+      "source": "BM/Apple.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/WeChat.list",
+      "source": "own/WeChat.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/direct.list",
+      "source": "own/direct.list"
+    },
+    {
+      "policy": "🚀 节点选择",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/vpn.list",
+      "source": "own/vpn.list"
+    },
+    {
+      "policy": "🚀 节点选择",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyGFWlist.list",
+      "source": "ACL/ProxyGFWlist.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaDomain.list",
+      "source": "ACL/ChinaDomain.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaCompanyIp.list",
+      "source": "ACL/ChinaCompanyIp.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Download.list",
+      "source": "ACL/Download.list"
+    },
+    {
+      "policy": "🎯 全球直连",
+      "url": "[]GEOIP,CN,no-resolve",
+      "source": "inline"
+    },
+    {
+      "policy": "🐟 漏网之鱼",
+      "url": "[]FINAL",
+      "source": "inline"
+    }
+  ],
+  "groups": [
+    {
+      "name": "🖐️ 手动切换",
+      "type": "select",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(.*).*$"
+    },
+    {
+      "name": "🖐️ AI手动切换",
+      "type": "select",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(.*).*$"
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(.*).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "♻️ AI安全自动",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(.*).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇺🇲 美国节点",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇺🇸|美国|美國|洛杉矶|西雅图|\\b(US[0-9]*|USA|United[ _-]?States|LAX|SFO|SEA)\\b).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 100
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇯🇵|日本|东京|大阪|\\b(JP[0-9]*|Japan|NRT|KIX)\\b).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇸🇬 狮城节点",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇸🇬|新加坡|狮城|\\b(SG[0-9]*|Singapore|SIN)\\b).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇹🇼 台湾节点",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇹🇼|台湾|台灣|\\b(TW[0-9]*|Taiwan|TPE)\\b).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "url-test",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong)\\b).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "⚡ 优选与自建",
+      "type": "select",
+      "refs": [
+        "🖐️ 手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$"
+    },
+    {
+      "name": "⚡ AI优选与自建",
+      "type": "select",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$"
+    },
+    {
+      "name": "🔄 优选故障转移",
+      "type": "fallback",
+      "refs": [
+        "♻️ 自动选择"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 120,
+      "tolerance": 50
+    },
+    {
+      "name": "🔄 AI优选故障转移",
+      "type": "fallback",
+      "refs": [
+        "♻️ AI安全自动"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 120,
+      "tolerance": 50
+    },
+    {
+      "name": "🚀 节点选择",
+      "type": "select",
+      "refs": [
+        "♻️ 自动选择",
+        "⚡ 优选与自建",
+        "🔄 优选故障转移",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇭🇰 香港节点",
+        "🖐️ 手动切换",
+        "DIRECT"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🤖 AI 专线",
+      "type": "select",
+      "refs": [
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "⚡ AI优选与自建",
+        "🔄 AI优选故障转移",
+        "♻️ AI安全自动",
+        "🖐️ AI手动切换"
+      ],
+      "regex": null
+    },
+    {
+      "name": "⚡ R2直连加速",
+      "type": "select",
+      "refs": [
+        "DIRECT",
+        "🔄 优选故障转移",
+        "⚡ 优选与自建",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇭🇰 香港节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "📦 模型下载",
+      "type": "select",
+      "refs": [
+        "🔄 优选故障转移",
+        "⚡ 优选与自建",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "DIRECT"
+      ],
+      "regex": null
+    },
+    {
+      "name": "📹 油管视频",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "♻️ 自动选择",
+        "⚡ 优选与自建",
+        "🇭🇰 香港节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇺🇲 美国节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🔍 谷歌服务",
+      "type": "select",
+      "refs": [
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "⚡ 优选与自建",
+        "🖐️ 手动切换"
+      ],
+      "regex": null
+    },
+    {
+      "name": "📲 电报与社媒",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "🇸🇬 狮城节点",
+        "🇭🇰 香港节点",
+        "🇯🇵 日本节点",
+        "🇺🇲 美国节点",
+        "⚡ 优选与自建"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🎵 Spotify",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "🖐️ 手动切换",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "DIRECT"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🎬 国际媒体",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇭🇰 香港节点",
+        "🇯🇵 日本节点",
+        "🇺🇲 美国节点",
+        "🖐️ 手动切换"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "refs": [
+        "DIRECT",
+        "🚀 节点选择"
+      ],
+      "regex": null
+    },
+    {
+      "name": "Ⓜ️ 微软服务",
+      "type": "select",
+      "refs": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🇺🇲 美国节点",
+        "🇭🇰 香港节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🍎 苹果服务",
+      "type": "select",
+      "refs": [
+        "🎯 全球直连",
+        "🚀 节点选择",
+        "🇺🇲 美国节点",
+        "🇭🇰 香港节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🛑 广告拦截",
+      "type": "select",
+      "refs": [
+        "REJECT",
+        "DIRECT"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🐟 漏网之鱼",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "DIRECT"
+      ],
+      "regex": null
+    }
+  ]
+}
