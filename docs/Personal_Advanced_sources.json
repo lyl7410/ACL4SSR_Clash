@@ -1,177 +1,342 @@
 {
   "date": "2026-10-14",
-  "revision": "openai-core-priority-guard",
-  "base_commit": "5e44361e0f9de1f03c8d4931fb44c387b0c41504",
+  "revision": "maintained-upstreams-personal-consolidated",
+  "base_commit": "4fc551c00d14a407232e285285c321b38619dc78",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5e44361e0f9de1f03c8d4931fb44c387b0c41504/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
       "name": "ACL/BanAD.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanAD.list",
-      "sha256": "27a5f6d018d428409d8da5d9f390a46298d505ae4941bb8172f052055abe7262"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanAD.list",
+      "sha256": "27a5f6d018d428409d8da5d9f390a46298d505ae4941bb8172f052055abe7262",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/BanProgramAD.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanProgramAD.list",
-      "sha256": "35cefd7a4c01d2efa9b4c7928e21caa348f78a3f60b46d7d850f1e3334a5a766"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanProgramAD.list",
+      "sha256": "35cefd7a4c01d2efa9b4c7928e21caa348f78a3f60b46d7d850f1e3334a5a766",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/ChinaCompanyIp.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaCompanyIp.list",
-      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaCompanyIp.list",
+      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/ChinaDomain.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaDomain.list",
-      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaDomain.list",
+      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/Download.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Download.list",
-      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Download.list",
+      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/LocalAreaNetwork.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/LocalAreaNetwork.list",
-      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/LocalAreaNetwork.list",
+      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/ProxyGFWlist.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyGFWlist.list",
-      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyGFWlist.list",
+      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/ProxyMedia.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyMedia.list",
-      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyMedia.list",
+      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/Telegram.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Telegram.list",
-      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Telegram.list",
+      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "ACL/UnBan.list",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/UnBan.list",
-      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa"
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
+      "audited_url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/UnBan.list",
+      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa",
+      "upstream_head": {
+        "sha": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "created_at": "2026-10-07T03:44:24Z"
+      }
     },
     {
       "name": "BM/Apple.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple.list",
-      "sha256": "97f7faf345fa8d269583d05533a631361fcdd49aceebceb7e38ba47633c09ab3"
-    },
-    {
-      "name": "BM/Claude.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Claude/Claude.list",
-      "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378"
-    },
-    {
-      "name": "BM/Copilot.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Copilot/Copilot.list",
-      "sha256": "12773330de34b84b7fd2f3f2af598480ea62d8574d8e9b8ae9d011a53c044d39"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple.list",
+      "sha256": "97f7faf345fa8d269583d05533a631361fcdd49aceebceb7e38ba47633c09ab3",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/Developer.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Developer/Developer.list",
-      "sha256": "d665f274c517e512aaf7ee72eff8ade6bccfc7146be9fbc24f92707ef2a829ec"
-    },
-    {
-      "name": "BM/Gemini.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Gemini/Gemini.list",
-      "sha256": "db8f69154426dca76792ab80b3ad6b0e2d078ebe0e52e76faec1724245a4ec49"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Developer/Developer.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Developer/Developer.list",
+      "sha256": "d665f274c517e512aaf7ee72eff8ade6bccfc7146be9fbc24f92707ef2a829ec",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/GitHub.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GitHub/GitHub.list",
-      "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GitHub/GitHub.list",
+      "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/Google.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.list",
-      "sha256": "d563f32cb2c294860f4a70ccb63c9a49c3bf0fa27ff9e094f1368f2faf91595e"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.list",
+      "sha256": "d563f32cb2c294860f4a70ccb63c9a49c3bf0fa27ff9e094f1368f2faf91595e",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/GoogleFCM.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GoogleFCM/GoogleFCM.list",
-      "sha256": "9794f848f2935db94be703f797921f8c512a1ddd213c20c47c1f884dccbd82ca"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "sha256": "9794f848f2935db94be703f797921f8c512a1ddd213c20c47c1f884dccbd82ca",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/Microsoft.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.list",
-      "sha256": "241e998fe692f1ad0cec29b66b95769bee656f4beb3b5ccd47f15b8e8935d5dc"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.list",
+      "sha256": "241e998fe692f1ad0cec29b66b95769bee656f4beb3b5ccd47f15b8e8935d5dc",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/Netflix.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Netflix/Netflix.list",
-      "sha256": "9ceac35682ac97d17223d90e08c4e56b52c072b1698d746a2d22444110318b57"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Netflix/Netflix.list",
+      "sha256": "9ceac35682ac97d17223d90e08c4e56b52c072b1698d746a2d22444110318b57",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/OneDrive.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.list",
-      "sha256": "cf4f6b24e434b6c6033b70fc88cf7e33f5aaa0f353f6963ced770f5fa1ae6c9b"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.list",
+      "sha256": "cf4f6b24e434b6c6033b70fc88cf7e33f5aaa0f353f6963ced770f5fa1ae6c9b",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
-      "name": "BM/OpenAI.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OpenAI/OpenAI.list",
-      "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b"
+      "name": "BM/Spotify.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Spotify/Spotify.list",
+      "sha256": "0832138646a9425340a62743e0a1f847f681b571b1d28d07372a97dd6fd46efd",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/TikTok.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/TikTok/TikTok.list",
-      "sha256": "7146b733ee239b6818d496aec1640cf1e962b39cda823388ce98d83761a6c885"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/TikTok/TikTok.list",
+      "sha256": "7146b733ee239b6818d496aec1640cf1e962b39cda823388ce98d83761a6c885",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/Twitter.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Twitter/Twitter.list",
-      "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Twitter/Twitter.list",
+      "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
     },
     {
       "name": "BM/YouTube.list",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/YouTube/YouTube.list",
-      "sha256": "a8e4819c3ee2ba71c06873769310ec012a3aa2e8fc54843168ae6edef6e75280"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
+      "audited_url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/YouTube/YouTube.list",
+      "sha256": "a8e4819c3ee2ba71c06873769310ec012a3aa2e8fc54843168ae6edef6e75280",
+      "upstream_head": {
+        "sha": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "created_at": "2026-10-13T22:14:18Z"
+      }
+    },
+    {
+      "name": "META/anthropic.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/anthropic.list",
+      "sha256": "b1790d825efa0d22258c89c5d3cd3b39cb98d1d13c9dae05d56fd434ea0856d8",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/bing.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/bing.list",
+      "sha256": "dc4ec8cb793929dd41a4ad3a0cd2d2e801cdc10f2346425a9e2efa67ae8bb3f3",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/github-copilot.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github-copilot.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/github-copilot.list",
+      "sha256": "d3ccb06e2621a53f8f885b44d200d6b1c434df4b3bfa0c933c721b964fda498a",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/google-gemini.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/google-gemini.list",
+      "sha256": "5d0bdd30ba80c9ac3feb2b7963a0704026d90ed7a4e2253ab7f283805ce17766",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/openai.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/openai.list",
+      "sha256": "5aa9a38539026b693135c769f6db10962345ac46860977cb168a52c9d5bfbf6d",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/tencent.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tencent.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/tencent.list",
+      "sha256": "deffb35ec013e5065be0ddd9dbae00eac4c783d056cada29cb008aaf9de3b4a6",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
+    },
+    {
+      "name": "META/xai.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.list",
+      "audited_url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288/geo/geosite/classical/xai.list",
+      "sha256": "47bb355be9b4b04520394af5c5e8a6d9882709438b03c72e1d9cf4e9f17e5760",
+      "upstream_head": {
+        "sha": "9c8e9f56b6ffadab05bfc933011b2bfc2f4f8288",
+        "created_at": "2026-10-14T01:21:44Z"
+      }
     }
   ],
   "changes": [
@@ -179,301 +344,6 @@
       "source": "Ai.list",
       "rule": "DOMAIN-SUFFIX,x.com",
       "action": "Transferred to social/model routing so AI-first does not intercept it"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN,browser-intake-datadoghq.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN,static.cloudflareinsights.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,ai.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,algolia.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,api.statsig.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,auth0.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,events.statsigapi.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,featuregates.org",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,host.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,identrust.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,intercom.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,intercomcdn.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,launchdarkly.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,observeit.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,segment.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,sentry.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,stripe.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-SUFFIX,turn.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "DOMAIN-KEYWORD,openai",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "IP-CIDR,24.199.123.28/32,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "IP-CIDR,64.23.132.171/32,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/OpenAI.list",
-      "rule": "IP-ASN,20473,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Claude.list",
-      "rule": "DOMAIN,cdn.usefathom.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,api.msn.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,api.statsig.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,assets.msn.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,browser-intake-datadoghq.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,in.appcenter.ms",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,location.microsoft.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,odc.officeapps.live.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,r.bing.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,self.events.data.microsoft.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN,static.cloudflareinsights.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,algolia.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,api.microsoftapp.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,auth0.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,bing-shopping.microsoft-falcon.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,challenges.cloudflare.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,chatgpt.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,client-api.arkoselabs.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,events.statsigapi.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,featuregates.org",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,host.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,identrust.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,intercom.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,intercomcdn.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,launchdarkly.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,observeit.net",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,segment.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,sentry.io",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,stripe.com",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "DOMAIN-SUFFIX,turn.livekit.cloud",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "IP-CIDR,24.199.123.28/32,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "IP-CIDR,64.23.132.171/32,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "IP-ASN,14061,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
-    },
-    {
-      "source": "BM/Copilot.list",
-      "rule": "IP-ASN,20473,no-resolve",
-      "action": "Excluded from AI-specific list: shared infrastructure, telemetry, generic keyword or ASN/IP scope"
     }
   ],
   "previous_personal_review": [
@@ -692,15 +562,282 @@
     "blackmatrix7 rule/Clash/AI/AI.list (404)",
     "blackmatrix7 rule/Clash/HuggingFace/HuggingFace.list (404; repository tree has no HuggingFace rule directory)"
   ],
+  "personal_coverage": [
+    {
+      "rule": "DOMAIN-SUFFIX,i234.me",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "ACL/UnBan.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,synology.me",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "ACL/UnBan.list"
+    },
+    {
+      "rule": "DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,btrace.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,dldir1.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,soup.v.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,vweixinf.tc.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,weixin110.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN,wup.imtt.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,iot-tencent.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,lbs.gtimg.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,map.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qlogo.cn",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,qpic.cn",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,servicewechat.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,tenpay.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,up-hl.3g.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,vweixinthumb.tc.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wechat.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,weixin.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,weixin.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,weixinbridge.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,weixinsxy.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wx.gtimg.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wx.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wxapp.tc.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,wxs.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,yun-hl.3g.qq.com",
+      "list": "Direct.list",
+      "upstream_policy": "🎯 全球直连",
+      "covered_by": "META/tencent.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,github.com",
+      "list": "Proxy.list",
+      "upstream_policy": "🚀 节点选择",
+      "covered_by": "BM/GitHub.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,iwara.tv",
+      "list": "Proxy.list",
+      "upstream_policy": "🎬 国际媒体",
+      "covered_by": "ACL/ProxyMedia.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,atom.io",
+      "list": "Proxy.list",
+      "upstream_policy": "🚀 节点选择",
+      "covered_by": "BM/GitHub.list"
+    },
+    {
+      "rule": "DOMAIN-KEYWORD,youtube",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN,youtubei.googleapis.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN,yt3.ggpht.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,googlevideo.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,gvt2.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youtu.be",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,youtube.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,ytimg.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📹 油管视频",
+      "covered_by": "BM/YouTube.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,accounts.google.com",
+      "list": "Proxy.list",
+      "upstream_policy": "🔍 谷歌服务",
+      "covered_by": "BM/Google.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,civitai.com",
+      "list": "Proxy.list",
+      "upstream_policy": "📦 模型下载",
+      "covered_by": "own/ModelDownload.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,huggingface.co",
+      "list": "Proxy.list",
+      "upstream_policy": "📦 模型下载",
+      "covered_by": "own/ModelDownload.list"
+    },
+    {
+      "rule": "DOMAIN,services.googleapis.cn",
+      "list": "Proxy.list",
+      "upstream_policy": "🔍 谷歌服务",
+      "covered_by": "BM/Google.list"
+    },
+    {
+      "rule": "DOMAIN-SUFFIX,t.co",
+      "list": "Proxy.list",
+      "upstream_policy": "📲 电报与社媒",
+      "covered_by": "BM/Twitter.list"
+    }
+  ],
+  "upstream_tracking": "Public rules track master/meta and refresh at subscription conversion, not on every connection; hashes describe only the audited snapshot.",
   "routes": [
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/LocalAreaNetwork.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
       "source": "ACL/LocalAreaNetwork.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/UnBan.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
       "source": "ACL/UnBan.list"
     },
     {
@@ -710,12 +847,12 @@
     },
     {
       "policy": "🛑 广告拦截",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanProgramAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
       "source": "ACL/BanProgramAD.list"
     },
     {
       "policy": "🛑 广告拦截",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/BanAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
       "source": "ACL/BanAD.list"
     },
     {
@@ -740,212 +877,152 @@
     },
     {
       "policy": "🤖 AI 专线",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/AI.list",
-      "source": "own/AI.list"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.list",
+      "source": "META/openai.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.list",
+      "source": "META/anthropic.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.list",
+      "source": "META/google-gemini.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github-copilot.list",
+      "source": "META/github-copilot.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.list",
+      "source": "META/xai.list"
+    },
+    {
+      "policy": "🤖 AI 专线",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.list",
+      "source": "META/bing.list"
     },
     {
       "policy": "⚡ R2直连加速",
-      "url": "[]DOMAIN-SUFFIX,civitai.delivery",
-      "source": "inline"
-    },
-    {
-      "policy": "⚡ R2直连加速",
-      "url": "[]DOMAIN-SUFFIX,r2.cloudflarestorage.com",
-      "source": "inline"
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal/R2Direct.list",
+      "source": "own/R2Direct.list"
     },
     {
       "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,civitai.com",
-      "source": "inline"
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal/ModelDownload.list",
+      "source": "own/ModelDownload.list"
     },
     {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,civitai.red",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,civitai.tv",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,civitai.link",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-KEYWORD,civitai",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,digitaloceanspaces.com",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,backblazeb2.com",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-KEYWORD,huggingface",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,githubusercontent.com",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,githubassets.com",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,download.pytorch.org",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,lykos.ai",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/HuggingFace.list",
-      "source": "own/HuggingFace.list"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]PROCESS-NAME,StabilityMatrix.exe",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]PROCESS-NAME,StabilityMatrix",
+      "policy": "📹 油管视频",
+      "url": "[]DOMAIN-SUFFIX,holodex.net",
       "source": "inline"
     },
     {
       "policy": "📹 油管视频",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/Holodex.list",
-      "source": "own/Holodex.list"
-    },
-    {
-      "policy": "📹 油管视频",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/YouTube/YouTube.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
       "source": "BM/YouTube.list"
     },
     {
       "policy": "🔍 谷歌服务",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.list",
       "source": "BM/GoogleFCM.list"
     },
     {
       "policy": "🔍 谷歌服务",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/google.list",
-      "source": "own/google.list"
-    },
-    {
-      "policy": "🔍 谷歌服务",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Google/Google.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
       "source": "BM/Google.list"
     },
     {
       "policy": "📲 电报与社媒",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Telegram.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
       "source": "ACL/Telegram.list"
     },
     {
       "policy": "📲 电报与社媒",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/Twitter-X.list",
-      "source": "own/Twitter-X.list"
-    },
-    {
-      "policy": "📲 电报与社媒",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Twitter/Twitter.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
       "source": "BM/Twitter.list"
     },
     {
       "policy": "🎵 Spotify",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/spotify.list",
-      "source": "own/spotify.list"
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list",
+      "source": "BM/Spotify.list"
     },
     {
       "policy": "🚀 节点选择",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Developer/Developer.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Developer/Developer.list",
       "source": "BM/Developer.list"
     },
     {
       "policy": "🚀 节点选择",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/GitHub/GitHub.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
       "source": "BM/GitHub.list"
     },
     {
       "policy": "🎬 国际媒体",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Netflix/Netflix.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
       "source": "BM/Netflix.list"
     },
     {
       "policy": "🎬 国际媒体",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/TikTok/TikTok.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list",
       "source": "BM/TikTok.list"
     },
     {
       "policy": "🎬 国际媒体",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyMedia.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
       "source": "ACL/ProxyMedia.list"
     },
     {
       "policy": "Ⓜ️ 微软服务",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/OneDrive/OneDrive.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list",
       "source": "BM/OneDrive.list"
     },
     {
       "policy": "Ⓜ️ 微软服务",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Microsoft/Microsoft.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
       "source": "BM/Microsoft.list"
     },
     {
       "policy": "🍎 苹果服务",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Clash/Apple/Apple.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
       "source": "BM/Apple.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/WeChat.list",
-      "source": "own/WeChat.list"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tencent.list",
+      "source": "META/tencent.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/direct.list",
-      "source": "own/direct.list"
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal/Direct.list",
+      "source": "own/Direct.list"
     },
     {
       "policy": "🚀 节点选择",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/vpn.list",
-      "source": "own/vpn.list"
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal/Proxy.list",
+      "source": "own/Proxy.list"
     },
     {
       "policy": "🚀 节点选择",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ProxyGFWlist.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
       "source": "ACL/ProxyGFWlist.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaDomain.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
       "source": "ACL/ChinaDomain.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/ChinaCompanyIp.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
       "source": "ACL/ChinaCompanyIp.list"
     },
     {
       "policy": "🎯 全球直连",
-      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Download.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list",
       "source": "ACL/Download.list"
     },
     {
@@ -1225,6 +1302,211 @@
       "url": "http://www.gstatic.com/generate_204",
       "interval": 120,
       "tolerance": 50
+    }
+  ],
+  "tracking_url_verification": [
+    {
+      "name": "ACL/BanAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
+      "http_status": 200,
+      "sha256": "27a5f6d018d428409d8da5d9f390a46298d505ae4941bb8172f052055abe7262",
+      "bytes": 15550
+    },
+    {
+      "name": "ACL/BanProgramAD.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
+      "http_status": 200,
+      "sha256": "35cefd7a4c01d2efa9b4c7928e21caa348f78a3f60b46d7d850f1e3334a5a766",
+      "bytes": 32638
+    },
+    {
+      "name": "ACL/ChinaCompanyIp.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
+      "http_status": 200,
+      "sha256": "cbc63e3daee0c0467558394ce0cfdd342f28e6c0f903bc4b35b6a5f06279d160",
+      "bytes": 7257
+    },
+    {
+      "name": "ACL/ChinaDomain.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
+      "http_status": 200,
+      "sha256": "362edd1f605742b360eaf138f151d7eea96cc17f20ef12da73acbfb80c350e08",
+      "bytes": 17251
+    },
+    {
+      "name": "ACL/Download.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list",
+      "http_status": 200,
+      "sha256": "62b72d16b8f2bcbc80eb2c7af35dc03b31c4d82e732af6d227c2a311f04bdadc",
+      "bytes": 928
+    },
+    {
+      "name": "ACL/LocalAreaNetwork.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
+      "http_status": 200,
+      "sha256": "0789504d97d8f5b14513c529c61c06f4f862c5cfd20f7cb30bbcd38357e54468",
+      "bytes": 1217
+    },
+    {
+      "name": "ACL/ProxyGFWlist.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
+      "http_status": 200,
+      "sha256": "72d5f97cb3adedd7ef632962effda4aa3b9953da20427cd6050d55d1184de5ea",
+      "bytes": 191112
+    },
+    {
+      "name": "ACL/ProxyMedia.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
+      "http_status": 200,
+      "sha256": "fe886c6f537c0214446018f3f64291db8d500c58877d180d2a21a78c19c499e1",
+      "bytes": 11502
+    },
+    {
+      "name": "ACL/Telegram.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
+      "http_status": 200,
+      "sha256": "483f613b31a1c054ddfffa6584b449f4447944ea58b8c1fc06b67eb13c09db89",
+      "bytes": 479
+    },
+    {
+      "name": "ACL/UnBan.list",
+      "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
+      "http_status": 200,
+      "sha256": "016837560f1f0eeb576f81600c95b547bd82e27ba27a175a3b5010de9bd18ffa",
+      "bytes": 1048
+    },
+    {
+      "name": "BM/Apple.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
+      "http_status": 200,
+      "sha256": "97f7faf345fa8d269583d05533a631361fcdd49aceebceb7e38ba47633c09ab3",
+      "bytes": 50838
+    },
+    {
+      "name": "BM/Developer.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Developer/Developer.list",
+      "http_status": 200,
+      "sha256": "d665f274c517e512aaf7ee72eff8ade6bccfc7146be9fbc24f92707ef2a829ec",
+      "bytes": 2325
+    },
+    {
+      "name": "BM/GitHub.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.list",
+      "http_status": 200,
+      "sha256": "ced8ab0ecda5775d04ec8ee6a57b282181108565331a6a1d85e9a26fee25d79b",
+      "bytes": 1117
+    },
+    {
+      "name": "BM/Google.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list",
+      "http_status": 200,
+      "sha256": "d563f32cb2c294860f4a70ccb63c9a49c3bf0fa27ff9e094f1368f2faf91595e",
+      "bytes": 19896
+    },
+    {
+      "name": "BM/GoogleFCM.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.list",
+      "http_status": 200,
+      "sha256": "9794f848f2935db94be703f797921f8c512a1ddd213c20c47c1f884dccbd82ca",
+      "bytes": 1590
+    },
+    {
+      "name": "BM/Microsoft.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
+      "http_status": 200,
+      "sha256": "241e998fe692f1ad0cec29b66b95769bee656f4beb3b5ccd47f15b8e8935d5dc",
+      "bytes": 20519
+    },
+    {
+      "name": "BM/Netflix.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list",
+      "http_status": 200,
+      "sha256": "9ceac35682ac97d17223d90e08c4e56b52c072b1698d746a2d22444110318b57",
+      "bytes": 40391
+    },
+    {
+      "name": "BM/OneDrive.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list",
+      "http_status": 200,
+      "sha256": "cf4f6b24e434b6c6033b70fc88cf7e33f5aaa0f353f6963ced770f5fa1ae6c9b",
+      "bytes": 735
+    },
+    {
+      "name": "BM/Spotify.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list",
+      "http_status": 200,
+      "sha256": "0832138646a9425340a62743e0a1f847f681b571b1d28d07372a97dd6fd46efd",
+      "bytes": 1210
+    },
+    {
+      "name": "BM/TikTok.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list",
+      "http_status": 200,
+      "sha256": "7146b733ee239b6818d496aec1640cf1e962b39cda823388ce98d83761a6c885",
+      "bytes": 1121
+    },
+    {
+      "name": "BM/Twitter.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list",
+      "http_status": 200,
+      "sha256": "64c836f2431ca0d4728cc545bb74280ee50c886e346040012e6cdd2f3eee3f97",
+      "bytes": 1116
+    },
+    {
+      "name": "BM/YouTube.list",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list",
+      "http_status": 200,
+      "sha256": "a8e4819c3ee2ba71c06873769310ec012a3aa2e8fc54843168ae6edef6e75280",
+      "bytes": 5227
+    },
+    {
+      "name": "META/anthropic.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.list",
+      "http_status": 200,
+      "sha256": "b1790d825efa0d22258c89c5d3cd3b39cb98d1d13c9dae05d56fd434ea0856d8",
+      "bytes": 269
+    },
+    {
+      "name": "META/bing.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.list",
+      "http_status": 200,
+      "sha256": "dc4ec8cb793929dd41a4ad3a0cd2d2e801cdc10f2346425a9e2efa67ae8bb3f3",
+      "bytes": 1242
+    },
+    {
+      "name": "META/github-copilot.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github-copilot.list",
+      "http_status": 200,
+      "sha256": "d3ccb06e2621a53f8f885b44d200d6b1c434df4b3bfa0c933c721b964fda498a",
+      "bytes": 268
+    },
+    {
+      "name": "META/google-gemini.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.list",
+      "http_status": 200,
+      "sha256": "5d0bdd30ba80c9ac3feb2b7963a0704026d90ed7a4e2253ab7f283805ce17766",
+      "bytes": 1613
+    },
+    {
+      "name": "META/openai.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.list",
+      "http_status": 200,
+      "sha256": "5aa9a38539026b693135c769f6db10962345ac46860977cb168a52c9d5bfbf6d",
+      "bytes": 812
+    },
+    {
+      "name": "META/tencent.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tencent.list",
+      "http_status": 200,
+      "sha256": "deffb35ec013e5065be0ddd9dbae00eac4c783d056cada29cb008aaf9de3b4a6",
+      "bytes": 19597
+    },
+    {
+      "name": "META/xai.list",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.list",
+      "http_status": 200,
+      "sha256": "47bb355be9b4b04520394af5c5e8a6d9882709438b03c72e1d9cf4e9f17e5760",
+      "bytes": 95
     }
   ]
 }

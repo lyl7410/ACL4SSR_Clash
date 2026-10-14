@@ -1,6 +1,6 @@
 # Clash 个人高阶分流与大文件下载配置
 
-版本：2026-10-14，常用业务与手动入口优先版。面向 Clash Verge Rev / Mihomo，采用服务分组、地区自动选择与一个共享故障转移池，使用已核实的 ACL4SSR、blackmatrix7 规则和本仓库个人规则。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
+版本：2026-10-14，上游维护规则与个人例外精简版。面向 Clash Verge Rev / Mihomo，采用服务分组、地区自动选择与一个共享故障转移池，通用业务直接使用已核实的 MetaCubeX、ACL4SSR、blackmatrix7 上游规则，个人部分仅保留四份按策略整理的例外。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
 
 ## 文件入口
 
@@ -8,9 +8,9 @@
 - [Personal_Advanced_override.yaml](../Clash/config/Personal_Advanced_override.yaml)：Mihomo YAML 覆写片段，含 DNS、Fake-IP 豁免、保活和嗅探。
 - [Personal_Advanced_base.yaml](../Clash/config/Personal_Advanced_base.yaml)：转换底稿，已包含覆写参数；INI 的 clash_rule_base 使用它。
 - [Personal_Advanced_node_tuning.js](../Clash/config/Personal_Advanced_node_tuning.js)：Verge 订阅脚本，用于转换结果中的自建 CF 节点，处理缺地区回退并关闭自建节点 smux / WebSocket Early Data。
-- [Personal_Advanced_sources.json](Personal_Advanced_sources.json)：真实来源 URL、固定提交、SHA-256、规则变更、分组与顺序。
+- [Personal_Advanced_sources.json](Personal_Advanced_sources.json)：跟踪分支 URL、本次审查提交、SHA-256、个人条目覆盖记录、分组与顺序。
 - [Personal_Advanced_validation.json](Personal_Advanced_validation.json)：本地解析、实际转换、分组隔离与路由检查结果。
-- [rule/Personal_Advanced/](../rule/Personal_Advanced/)：可审查的个人修复列表及 AI/Hugging Face 聚合列表。
+- [rule/Personal/](../rule/Personal/)：仅含 ModelDownload、R2Direct、Direct、Proxy 四份个人例外。
 
 订阅转换模板直链：
 
@@ -29,7 +29,7 @@ https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/Clash/config/Person
 ## 使用步骤
 
 1. 在自己的 Subconverter / SubConverter-Extended 前端选择 Clash 输出，传入机场订阅，并把上面的 INI 直链填写到“远程配置/外部配置”项。自建本机转换器可避免把机场 URL 交给公共转换站。
-2. 转换接口参数为 `target=clash`、`url=<机场订阅 URL>`、`config=<INI 直链>`；参数要 URL 编码。转换器还必须能下载 INI 引用的基础 YAML、个人列表和固定提交的公共列表。
+2. 转换接口参数为 `target=clash`、`url=<机场订阅 URL>`、`config=<INI 直链>`；参数要 URL 编码。转换器还必须能下载 INI 引用的基础 YAML、个人例外列表和上游分支的公共列表。
 3. 将转换后的 YAML 导入 Clash Verge Rev。首次确认 `🤖 AI 专线` 默认美国、`⚡ R2直连加速` 默认 DIRECT、`📦 模型下载` 默认通用故障转移。
 4. 转换结果已经通过 base.yaml 带上 override 参数。如果客户端会重写 DNS 等字段，或使用自己的转换底稿，在该订阅的 **YAML 合并/覆写编辑器** 应用 override.yaml，并检查最终运行配置。不要把 YAML 粘贴到 JavaScript 脚本编辑器。
 5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理地区回退以及 provider 手动池的空池行为；传输参数调优只作用于 `proxies` 中按名称识别的自建节点。provider 内的节点传输参数需要在节点源或订阅预处理中修改。
@@ -46,13 +46,13 @@ Clash Verge Rev 的编辑器名称随版本不同。YAML 片段走 Merge，`func
 | 1 | LocalAreaNetwork、UnBan | 全球直连 |
 | 2 | 精确 challenges.cloudflare.com 兼容规则 | 普通节点选择，避免强绑 AI 组及被其他列表提前捕获 |
 | 3 | BanProgramAD、BanAD | 广告拦截，默认 REJECT |
-| 4 | 聚合 AI：个人 AI/Gemini 与审查后的 OpenAI/Gemini/Claude/Copilot | AI 专线 |
+| 4 | MetaCubeX OpenAI、Anthropic、Gemini、GitHub Copilot、xAI、Bing（含微软 Copilot） | AI 专线 |
 | 5 | civitai.delivery、r2.cloudflarestorage.com | R2直连加速，默认 DIRECT |
 | 6 | Civitai 主站/镜像/关键字、对象存储、HF/Xet、GitHub 资源、PyTorch、Lykos | 模型下载 |
 | 7 | StabilityMatrix.exe / StabilityMatrix 进程兜底 | 模型下载 |
-| 8 | Holodex/YouTube、Google FCM/Google、Telegram/Twitter-X、个人 Spotify | 各自业务组 |
+| 8 | Holodex/YouTube、Google FCM/Google、Telegram/Twitter、上游 Spotify | 各自业务组 |
 | 9 | Developer、GitHub 页面、国际媒体、微软/OneDrive、苹果 | 对应业务组 |
-| 10 | 个人 WeChat/direct/vpn；GFW 泛代理 | 个人意图及普通代理 |
+| 10 | 上游 Tencent（含微信）、个人 Direct/Proxy 剩余例外；GFW 泛代理 | 个人意图及普通代理 |
 | 11 | ChinaDomain、ChinaCompanyIp、Download、GEOIP CN no-resolve | 全球直连 |
 | 12 | FINAL | 漏网之鱼 |
 
@@ -88,7 +88,7 @@ url-test/fallback 可能在新连接上切换出口。已有 TCP 连接不能无
 
 digitaloceanspaces.com、backblazeb2.com 是共享对象存储后缀，r2.cloudflarestorage.com 也是共享后缀。按需求纳入的规则会影响这些后缀的所有租户，并非仅 Civitai。若日志能确认完整的模型文件主机名，可用精确 DOMAIN 规则缩小范围；不要凭空编造 bucket 名。
 
-HF 规则涵盖 huggingface.co、hf.co、hf.space、xethub.hf.co。主 hf.co 后缀已经覆盖 Xet 子域，明确保留 Xet 条目方便维护。blackmatrix7 仓库当前不存在规划中写的 HuggingFace.list 路径，因此本仓库新建明确标记的 HF 列表；AI.list 也由真实个人及已核实 AI 列表合并。没有引用不存在的上游路径。
+HF、Civitai、GitHub 资源、PyTorch、Lykos 和 StabilityMatrix 进程规则统一放进 ModelDownload.list，INI 只引用一次。hf.co 已覆盖 xethub.hf.co，不重复列子域；进程兜底放列表最后。R2Direct.list 单独列在模型列表之前，因为它使用不同策略，不能将两者混成一份不带策略的规则清单。没有引用并不存在的上游 HuggingFace.list。
 
 R2 直连不经自建 Workers 节点，可减少代理链中的一个故障环节，但本地运营商连通、源站限流、TLS、签名有效期与应用续传行为仍会影响下载。R2直连加速策略可随时切换通用故障转移/主力地区以对比。
 
@@ -125,21 +125,27 @@ Sniffer 启用 parse-pure-ip，HTTP 覆盖 80、8080-8880，TLS/QUIC 覆盖 443/
 
 ## 个人规则保留与误杀审查
 
-原 `rule/Ai.list`、`Google Gemini.list`、`WeChat.list`、`civitai.list`、`direct.list`、`google.list`、`spotify.list`、`twitter.list`、`vpn.list` 均保持原样。新修复副本位于 Personal_Advanced 子目录，旧文件可继续追溯。
+原 `rule/Ai.list`、`Google Gemini.list`、`WeChat.list`、`civitai.list`、`direct.list`、`google.list`、`spotify.list`、`twitter.list`、`vpn.list` 均原样留存。新模板不再引用这些文件，也不再引用旧的 rule/Personal_Advanced 快照；旧路径仍在 GitHub 保留，兼容尚未更新的订阅。
 
-保留此前已审查的修复：粘连条目拆正、USER-AGENT 归档、atom.io/packages 修成域名、qbittorrent* 修成 Windows 进程名。Google Gemini 的泛 google keyword 与 AI 的整个 googleapis.com 规则由 Google 组承接；具体 Gemini API 优先。x.com 从 AI 转入社媒，避免将整个 X 当成 AI。
+通用 AI/Google/Spotify/Twitter/微信业务改由上游承接，不能保证与每一条旧个人规则逐字等价：旧 AI 中的共享 auth0/statsig、过宽 Google 关键字和固定服务 IP 不再沿用。x.com 使用社媒线路；国内 AI 保留 Direct 例外；模型规则统一到 ModelDownload。Direct 合并原 direct 与上游尚未覆盖的微信域名，Proxy 继承 vpn 中的个性化站点。已被更早业务规则覆盖的个人重复条目从新列表移除，sources.json 的 personal_coverage 记录具体来源和目标组。原始文件不被改写。
 
-审查后的 AI 合并去重；没有把整个 ASN 20473/14061 或共享证书、支付、遥测域名当成 AI 专属。前次个人审查与本次 upstream AI 除外项均写入 sources.json。广告只加载指定两份基础列表，但“轻量”不等于不会误杀；有问题先切广告组为 DIRECT，再对照具体命中条目加精确例外。
+AI 使用 MetaCubeX 的细分 geosite classical 清单，而非 category-ai-!cn：后者包含 Hugging Face，会抢占模型下载线路。六份 AI 清单在此次审查中均为域名规则，没有 ASN/CIDR，不把整个共享支付、证书或 Cloudflare 网络送到 AI；OpenAI 清单仍含精确的 Datadog 遥测主机及 LiveKit 子域，可能影响同一精确主机的其他使用方。Bing 清单会将 Bing 搜索与微软 Copilot 一并交给 AI 专线，不是仅识别对话请求。
+
+微信由 MetaCubeX tencent 域名清单与个人剩余例外承接，范围包含其他腾讯服务。未采用 blackmatrix7 WeChat 中的腾讯 ASN 132203，以免新增 ASN 数据库依赖和按整段网络分流。广告仍只加载 BanProgramAD、BanAD；“轻量”不等于不会误杀，有问题先将广告组切为 DIRECT 并核对具体命中项。
 
 没有启用全局 Cloudflare CIDR、ASN 或 `GEOIP,cloudflare`。这类规则既可能影响不相关的共享 CDN，也可能要求当前 MMDB 不存在的 GeoIP 分类。自己的 CF 节点通过名称选择，与目标网站的 Cloudflare IP 网段分流是两件事。
 
 ## 更新、回滚和测试边界
 
-上游公共列表固定在此次核实的提交，来源表有完整 URL/哈希；个人聚合列表走本仓库 main。这样不会因未审查的上游改动直接改变分流。更新时先检查 source-manifest 中的来源，再修改聚合列表/固定提交并重新验证；只换上游版本号还需检查内容格式。
+公共 URL 现在跟踪 MetaCubeX 的 meta 分支，以及 ACL4SSR、blackmatrix7 的 master 分支。上游仓库最近提交分别为 2026-10-14、2026-10-07、2026-10-13（UTC）；仓库近期有提交不代表每个业务清单每天变化。本次逐个下载核实 29 条公共引用，来源表同时保存审查提交 URL 和字节哈希。
+
+自动获取新规则发生在刷新转换缓存并重新转换订阅时；既有 YAML 不会因上游提交自行更新。这提高更新便利性，也意味着未来规则内容可能变化。本次测试只覆盖记录的快照；需要完全可复现时，将来源表中的 audited_url 固定提交地址替换回 INI。公共转换器仍能看到订阅 URL，建议本地转换。
+
+MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转换逐条保留、Mihomo v1.19.32 可解析。旧版 Subconverter 或第三方转换站是否支持不能据此保证，导入前核对输出，不能静默忽略未知规则。切换主流源不能保证永不误分流，规则顺序和最终运行配置仍需核对。
 
 修改 INI、底稿或列表后，需要刷新转换器缓存并重新转换，不能只重载已生成的旧 YAML。遇到问题可切回原订阅/旧配置或移除新增的覆写与脚本，原规则文件没有被替换。
 
-已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、24 个域名/进程/回环样例、转换 YAML + 合并 override + 节点调优输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
+已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、28 个域名/进程/回环样例、转换 YAML + 合并 override + 节点调优输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
 
 没有真实机场凭据。使用的节点为 127.0.0.1:9 占位，未发出真实代理流量。此前 5386ff4 版本已通过本机核心 API 检查动态 provider 成员、SEA 归属、AI/模型隔离和缺地区回退；本机 HTTP 对照测试中 REJECT 返回测速失败，DIRECT 测得 1ms。这不是真实节点的延迟测量。
 
@@ -171,11 +177,11 @@ Sniffer 启用 parse-pure-ip，HTTP 覆盖 80、8080-8880，TLS/QUIC 覆盖 443/
 - **认识共享手动入口**：油管、谷歌、模型若都选普通手动，修改手动节点会一起影响它们。需要独立时可给对应业务组增加直接选节点的能力，优先复用现有池，不再复制大量底层分组。
 - **保留少量诊断开关**：R2 默认 DIRECT；下载失败时仅切换 R2 组对比代理，验证问题先核对普通总控与当前网站的出口，避免同时改 DNS/Hosts/节点而无法定位原因。
 
-本次实际转换、核心检查及旧缓存排列修复测试通过，为 23 组、14,829 条转换规则（含四条 OpenAI 核心域名内联保障）。地区过滤保持不变。
+本次实际转换、核心检查及旧缓存排列修复测试通过，为 23 组、15,456 条转换规则（含四条 OpenAI 核心域名内联保障）。地区过滤保持不变。
 
 ### Codex / ChatGPT 误入国际媒体的修复
 
-用户提供的连接是 `chatgpt.com:443`、进程 `codex.exe`，命中 `DomainSuffix(chatgpt.com)`，却进入国际媒体。当前 AI.list 已收录该域名且按模板应先于媒体规则；固定的上游 ProxyMedia.list 也包含 chatgpt.com。因此该链路与预期不符，但仅凭连接详情不能确定是转换缓存、AI 清单加载失败、后续扩展覆盖顺序，还是旧连接仍保留原路径。
+用户提供的连接是 `chatgpt.com:443`、进程 `codex.exe`，命中 `DomainSuffix(chatgpt.com)`，却进入国际媒体。当时的 AI.list 已收录该域名且按模板应先于媒体规则；上游 ProxyMedia.list 也包含 chatgpt.com。因此该链路与预期不符，但仅凭连接详情不能确定是转换缓存、AI 清单加载失败、后续扩展覆盖顺序，还是旧连接仍保留原路径。
 
 INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic.com`、`oaiusercontent.com` 四个后缀。配套 JS 在存在 AI 专线组时，将这四条规则移至规则表最前并去除相同保障规则的重复项；没有 AI 组则跳过，避免引用不存在的策略。脚本不将整个 codex.exe 或通用子进程强制分流。
 
@@ -191,8 +197,8 @@ INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic
 | REJECT 有时作为正常 0ms 节点胜出 | 当前核心的本机对照测试未复现：REJECT 测速失败（HTTP 503），正常连接为 1ms。URL-test 根据存活/延迟信息选择；只有拒绝策略可用时拒绝流量本就是预期。改为安全手动回退改善缺地区体验，但不保证真实节点全坏时不断网 |
 | SEA 移到新加坡 | 不采用，你已确认默认美国。实际 fixture 使用反代IP-SEA-21.03M-clone，核心确认在美国候选而不在新加坡候选 |
 | 面板业务组应在前 | 已调整；普通手动和四项高频业务靠前，原始 INI 的前向引用也通过转换验证 |
-| daily-cloudcode-pa.googleapis.com | 已加入聚合 AI.list，generativelanguage.googleapis.com 原已存在并保留；AI 规则仍先于 Google |
-| 重复 HF/Civitai 引用 | HF 专用列表作为域名来源，移除重复内联四条；Civitai 规则内联保留，移除重复的远程单条列表引用。原文件仍留存 |
+| daily-cloudcode-pa.googleapis.com | 已由上游 google-gemini.list 覆盖；AI 规则仍先于 Google |
+| 重复 HF/Civitai 引用 | 现统一为一条 ModelDownload.list 引用，内部覆盖 HF/Civitai/资源/进程；R2Direct 使用独立策略并优先匹配。旧文件留存兼容 |
 | git/python/aria2 进程 | 不全局绑到模型下载：进程名不能可靠判断是不是 StabilityMatrix 派生任务，会误接管无关 Git、Python、aria2 流量。保留现有域名覆盖及 StabilityMatrix 进程兜底，新增进程应有实际日志依据 |
 | 美国词库、冗余正则 | 已补齐城市/机场代码，并简化全量池匹配。用户粘贴代码中的 Markdown 转义和 `\vert{}` 未原样写入配置 |
 | Commit SHA 完全防投毒 | 锁定版本能减少上游漂移，不证明锁定内容本身可信，也不保证未来托管可访问；本仓库 main 仍可更新，需要继续审查 |
@@ -209,3 +215,16 @@ INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic
 - [Cloudflare Workers 限制](https://developers.cloudflare.com/workers/platform/limits/)、[可读取的文档源码](https://github.com/cloudflare/cloudflare-docs/blob/production/src/content/docs/workers/platform/limits.mdx)：本次通过文档源码核实内存/流式处理/时长说明。
 - [HF 下载](https://huggingface.co/docs/huggingface_hub/guides/download)、[HF 存储后端](https://huggingface.co/docs/hub/storage-backends)。
 - [StabilityMatrix DownloadService](https://github.com/LykosAI/StabilityMatrix/blob/main/StabilityMatrix.Core/Services/DownloadService.cs)：当前 Range/重试逻辑参考。
+
+## 当前维护入口
+
+| 内容 | 修改位置 | INI 引用数 |
+|---|---|---|
+| Civitai、HF/Xet、代码资源、PyTorch、StabilityMatrix | [ModelDownload.list](../rule/Personal/ModelDownload.list) | 1 |
+| 实体 R2 下载，默认直连 | [R2Direct.list](../rule/Personal/R2Direct.list) | 1 |
+| 国内 AI、NAS、下载器等直连例外 | [Direct.list](../rule/Personal/Direct.list) | 1 |
+| 其他个人代理站点 | [Proxy.list](../rule/Personal/Proxy.list) | 1 |
+
+通用业务直接修改上游选型或更新转换结果，无需在本仓库维护 Google、Spotify、Twitter、AI 的复制品。Holodex 仅保留一条内联规则，避免为单个域名再建一个文件。四条 OpenAI 内联规则和脚本前置保障继续保留，用于远程 AI 清单加载异常时的核心域名回退。
+
+总计 41 条 ruleset 声明、23 个策略组；本次快照转换后 15,456 条规则。条目总数会随上游分支更新而变化。四份个人列表使用标准无策略列 .list 格式，不能将不同目标策略随意合并成一个文件。

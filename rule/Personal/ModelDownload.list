@@ -1,0 +1,18 @@
+# Personal policy-specific exceptions; no policy column. See docs/Personal_Advanced.md
+DOMAIN-SUFFIX,civitai.com
+DOMAIN-SUFFIX,civitai.red
+DOMAIN-SUFFIX,civitai.tv
+DOMAIN-SUFFIX,civitai.link
+DOMAIN-KEYWORD,civitai
+DOMAIN-SUFFIX,digitaloceanspaces.com
+DOMAIN-SUFFIX,backblazeb2.com
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,hf.space
+DOMAIN-KEYWORD,huggingface
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,download.pytorch.org
+DOMAIN-SUFFIX,lykos.ai
+PROCESS-NAME,StabilityMatrix.exe
+PROCESS-NAME,StabilityMatrix
