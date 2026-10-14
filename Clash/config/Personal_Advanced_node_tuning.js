@@ -1,6 +1,14 @@
 // Clash Verge Rev script: conditional group fallbacks and literal node tuning.
 // Apply after using Personal_Advanced.ini. This is not a Mihomo YAML file.
 function main(config) {
+  // Guard core OpenAI domains even if an older media list precedes the AI list.
+  // Skip profiles without the policy, avoiding dangling rule references.
+  if ((config["proxy-groups"] || []).some(group => group.name === "🤖 AI 专线")) {
+    const aiRules = ["chatgpt.com", "openai.com", "oaistatic.com", "oaiusercontent.com"]
+      .map(domain => "DOMAIN-SUFFIX," + domain + ",🤖 AI 专线");
+    const guards = new Set(aiRules);
+    config.rules = aiRules.concat((config.rules || []).filter(rule => !guards.has(rule)));
+  }
   // Frequent services and manual cards first; also applies to cached converted profiles.
   const panelOrder = ["🖐️ 手动切换", "📹 油管视频", "🔍 谷歌服务", "🤖 AI 专线", "🖐️ AI手动切换", "📦 模型下载", "⚡ R2直连加速", "🚀 节点选择", "📲 电报与社媒", "🎵 Spotify", "🎬 国际媒体", "Ⓜ️ 微软服务", "🍎 苹果服务", "🎯 全球直连", "🛑 广告拦截", "🐟 漏网之鱼", "🇺🇲 美国节点", "🇯🇵 日本节点", "🇸🇬 狮城节点", "🇹🇼 台湾节点", "🇭🇰 香港节点", "♻️ 自动选择", "🔄 故障转移"];
   const panelRank = new Map(panelOrder.map((name, index) => [name, index]));
