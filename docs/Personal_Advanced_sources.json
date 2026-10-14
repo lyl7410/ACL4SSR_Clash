@@ -1,51 +1,51 @@
 {
   "date": "2026-10-15",
-  "revision": "compact-panel-ini-order-authoritative",
-  "base_commit": "e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f",
+  "revision": "model-civitai-node-name-matching",
+  "base_commit": "a028e4c92cf7748e8141e0ae217e9a878c59dc88",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/a028e4c92cf7748e8141e0ae217e9a878c59dc88/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
@@ -1104,7 +1104,8 @@
         "🇹🇼 台湾节点",
         "DIRECT"
       ],
-      "regex": null
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(civitai).*$",
+      "regex_after_refs": true
     },
     {
       "name": "⚡ R2直连加速",

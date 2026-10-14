@@ -20,3 +20,5 @@
 通用源在重新转换时更新；本次核实全部 29 条公共引用。模型下载只引用一次 ModelDownload.list，R2Direct、Direct、Proxy 各引用一次。上游审查提交和哈希见来源表。已通过 Extended/Mihomo 检查，旧 Subconverter 的 DOMAIN-REGEX 支持需另行确认。
 
 微软和苹果公共规则统一进入全球直连，Spotify 并入国际媒体，共减少三个业务组。AI/Copilot 与其他更早的业务规则仍优先。域名分流 ruleset 的优先级不可按 UI 排列随意改动。
+
+模型下载组支持直接选择名称含 civitai 的节点（忽略大小写、排除英国标签），保留原默认与回退候选，无需另建节点池。
