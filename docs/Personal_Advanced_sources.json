@@ -1,7 +1,7 @@
 {
   "date": "2026-10-15",
-  "revision": "model-civitai-node-name-matching",
-  "base_commit": "a028e4c92cf7748e8141e0ae217e9a878c59dc88",
+  "revision": "edgetunnel-source-transport-client-preserves-nodes",
+  "base_commit": "5320da15273a2a6e6969b7757cb229899ebadb8c",
   "sources": [
     {
       "name": "personal/Ai.list",
@@ -1475,5 +1475,16 @@
       "sha256": "47bb355be9b4b04520394af5c5e8a6d9882709438b03c72e1d9cf4e9f17e5760",
       "bytes": 95
     }
-  ]
+  ],
+  "edgetunnel_source_review": {
+    "commit": "a8ab11125ece9bc27983f609a6359be81b21050c",
+    "sha256": "1e84d11af0544654bf56a06fa833e77184a57193288a9ffccf62c031a9fb7d65",
+    "url": "https://github.com/cmliu/edgetunnel/blob/a8ab11125ece9bc27983f609a6359be81b21050c/_worker.js",
+    "recommended_source_setting": {
+      "启用0RTT": false
+    },
+    "client_transport_changes": "removed; node fields preserved",
+    "actual_user_deployment_modified": false,
+    "backend_conversion_probe": "HTTP 403; actual output not verified"
+  }
 }

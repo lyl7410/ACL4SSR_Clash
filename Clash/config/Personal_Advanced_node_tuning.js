@@ -1,4 +1,5 @@
-// Clash Verge Rev script: conditional group fallbacks and literal node tuning.
+// Clash Verge Rev script: AI priority guard and conditional group fallbacks.
+// Legacy filename retained; node transport fields are preserved unchanged.
 // Apply after using Personal_Advanced.ini. This is not a Mihomo YAML file.
 function main(config) {
   // Guard core OpenAI domains even if an older media list precedes the AI list.
@@ -43,27 +44,7 @@ function main(config) {
       group.proxies.push(backup);
     }
   }
-  const selfBuilt = /反代|自建|\bCF\b|Cloudflare|clone/i;
-  for (const node of config.proxies || []) {
-    if (!selfBuilt.test(node.name || "")) continue;
-    if (!["vmess", "vless", "trojan", "ss"].includes(node.type)) continue;
-    // Mihomo uses smux.enabled; generic mux:false is not its node-option syntax.
-    delete node.mux;
-    node.smux = Object.assign({}, node.smux || {}, { enabled: false });
-    const ws = node["ws-opts"];
-    if (!ws) continue;
-    if (typeof ws.path === "string" && ws.path.includes("?")) {
-      const pos = ws.path.indexOf("?");
-      const base = ws.path.slice(0, pos);
-      const kept = ws.path.slice(pos + 1).split("&").filter(part => {
-        const key = part.split("=", 1)[0];
-        try { return decodeURIComponent(key).toLowerCase() !== "ed"; }
-        catch (_) { return true; }
-      });
-      ws.path = base + (kept.length ? "?" + kept.join("&") : "");
-    }
-    ws["max-early-data"] = 0;
-    delete ws["early-data-header-name"];
-  }
+  // Transport settings belong to the edgetunnel subscription source.
+  // Do not rewrite node paths, credentials, plugin options, smux or Early Data here.
   return config;
 }

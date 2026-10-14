@@ -5,7 +5,7 @@
 - [完整设计、使用方法与测试清单](docs/Personal_Advanced.md)
 - [Subconverter INI 模板](Clash/config/Personal_Advanced.ini)
 - [Mihomo override.yaml](Clash/config/Personal_Advanced_override.yaml)
-- [回退与自建 CF 节点调优脚本](Clash/config/Personal_Advanced_node_tuning.js)
+- [AI 优先级与回退保护脚本](Clash/config/Personal_Advanced_node_tuning.js)
 - [来源与变更记录](docs/Personal_Advanced_sources.json)
 - [本地验证结果](docs/Personal_Advanced_validation.json)
 
@@ -22,3 +22,5 @@
 微软和苹果公共规则统一进入全球直连，Spotify 并入国际媒体，共减少三个业务组。AI/Copilot 与其他更早的业务规则仍优先。域名分流 ruleset 的优先级不可按 UI 排列随意改动。
 
 模型下载组支持直接选择名称含 civitai 的节点（忽略大小写、排除英国标签），保留原默认与回退候选，无需另建节点池。
+
+自建节点已改用 [edgetunnel 源头设置与单节点验证](docs/EdgeTunnel_Setup.md)：先在面板关闭 Early Data，再更新订阅。新版配套 JS 不再改写节点路径、smux 或 Early Data，只保留 AI 与回退保护。

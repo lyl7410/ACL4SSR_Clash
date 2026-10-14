@@ -7,7 +7,7 @@
 - [Personal_Advanced.ini](../Clash/config/Personal_Advanced.ini)：订阅转换模板。
 - [Personal_Advanced_override.yaml](../Clash/config/Personal_Advanced_override.yaml)：Mihomo YAML 覆写片段，含 DNS、Fake-IP 豁免、保活和嗅探。
 - [Personal_Advanced_base.yaml](../Clash/config/Personal_Advanced_base.yaml)：转换底稿，已包含覆写参数；INI 的 clash_rule_base 使用它。
-- [Personal_Advanced_node_tuning.js](../Clash/config/Personal_Advanced_node_tuning.js)：Verge 订阅脚本，用于转换结果中的自建 CF 节点，处理缺地区回退并关闭自建节点 smux / WebSocket Early Data。
+- [Personal_Advanced_node_tuning.js](../Clash/config/Personal_Advanced_node_tuning.js)：Verge 订阅脚本，保留 AI 规则优先级并处理缺地区回退；不再修改节点传输参数，历史文件名保留。
 - [Personal_Advanced_sources.json](Personal_Advanced_sources.json)：跟踪分支 URL、本次审查提交、SHA-256、个人条目覆盖记录、分组与顺序。
 - [Personal_Advanced_validation.json](Personal_Advanced_validation.json)：本地解析、实际转换、分组隔离与路由检查结果。
 - [rule/Personal/](../rule/Personal/)：仅含 ModelDownload、R2Direct、Direct、Proxy 四份个人例外。
@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/Clash/config/Person
 2. 转换接口参数为 `target=clash`、`url=<机场订阅 URL>`、`config=<INI 直链>`；参数要 URL 编码。转换器还必须能下载 INI 引用的基础 YAML、个人例外列表和上游分支的公共列表。
 3. 将转换后的 YAML 导入 Clash Verge Rev。首次确认 `🤖 AI` 默认美国、`⚡ R2直连加速` 默认 DIRECT、`📦 模型下载` 默认通用故障转移。
 4. 转换结果已经通过 base.yaml 带上 override 参数。如果客户端会重写 DNS 等字段，或使用自己的转换底稿，在该订阅的 **YAML 合并/覆写编辑器** 应用 override.yaml，并检查最终运行配置。不要把 YAML 粘贴到 JavaScript 脚本编辑器。
-5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理地区回退以及 provider 手动池的空池行为；传输参数调优只作用于 `proxies` 中按名称识别的自建节点。provider 内的节点传输参数需要在节点源或订阅预处理中修改。
+5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理 AI 规则优先级、地区回退以及 provider 手动池的空池行为。先按 [edgetunnel 源头设置与单节点验证](EdgeTunnel_Setup.md) 关闭源头 Early Data，再换用新版脚本；节点传输设置由源头负责。
 6. 先测试系统代理，再在 Verge 中以必要的服务/管理员权限启用 TUN。底稿默认 TUN 关闭；单纯设置进程规则不代表应用所有流量已被接管。
 
 Clash Verge Rev 的编辑器名称随版本不同。YAML 片段走 Merge，`function main(config)` 代码走 Script。出现脚本错误时，客户端可能沿用旧配置，必须核对最终配置及日志。OpenClash 应将字段合并进完整运行 YAML 或其相应自定义覆写机制，不能假定导入 INI 已设置路由器系统 DNS、透明代理或权限。
@@ -113,15 +113,15 @@ Fake-IP 模式下，Civitai/HF/Xet/GitHub 资源/PyTorch 域名按规划豁免�
 
 Sniffer 启用 parse-pure-ip，HTTP 覆盖 80、8080-8880，TLS/QUIC 覆盖 443/8443，并在全局和各协议明确设置 override-destination:false。嗅探能补充部分缺失域名，但加密 ECH、某些 QUIC 或非支持协议可能无法识别；不会强行覆盖已指定的目标/Hosts。
 
-## 自建 CF 节点调优
+## 自建 CF 节点设置：在订阅源完成
 
-本文件脚本先处理回退与手动池，再处理节点传输参数。静态 override.yaml 无法在不知道真实节点列表时，按名称修改每个节点的 ws path 或 smux。配套 JS 对 literal proxies 中名称包含反代/自建/CF/Cloudflare/clone，且类型为 vmess/vless/trojan/ss 的节点处理：
+按当前讨论采用普通 WebSocket、不主动启用 sing-mux 的保守基线。已核实源头是 cmliu/edgetunnel，关闭面板的“启用0-RTT(ed=2560)”并检查 PATH 内没有手工残留的 ed 参数；原路径中的鉴权、proxyip 等其他内容必须保留。具体操作和单节点检查见 [EdgeTunnel_Setup.md](EdgeTunnel_Setup.md)。
 
-- 设置 `smux.enabled:false`；Mihomo 节点使用该语法，不能随意加入通用 `mux:false` 并假定生效。
-- 从 ws-opts.path 仅删除 ed 查询参数，保留 token 等其他参数；将 max-early-data 设为 0 并移除 early-data-header-name。
-- 不改变普通机场节点；只有“优选”名称而无自建/CF 标记的节点也不自动改动。
+新版配套 JS 已移除按名称识别 CF、自建、clone 并改写节点的逻辑，所有节点字段原样保留，适用于名称为 civitai1 等场景，也避免误以为它能改写远程 provider。AI 规则前置和缺地区回退仍保留。历史文件名 node_tuning.js 为兼容已有链接暂不改名。
 
-如果你的自建服务依赖 Early Data 或多路复用，应先确认服务端支持关闭，再做 A/B 下载比较。这份配置按个人请求默认对匹配的自建节点关闭相关功能，不能据此证明 Early Data 导致“乱序崩溃”。provider 节点需在其源配置修正，不能声称此脚本已经修改远程 provider 内的未知节点。
+当前源代码生成的普通 VLESS/Trojan URI 没有主动启用 Mihomo sing-mux；没有 smux 配置不等于必须补一份强制关闭脚本。若实际转换结果出现 smux.enabled:true，需在转换源或后端修正，当前 INI 没有通用的批量节点字段覆写功能。SS/v2ray-plugin 的 mux 与 sing-mux 不是同一字段，应另行检查，不能套用 VLESS 步骤。
+
+这不是保证修复 EOF、502、Codex 断连或下载中断的方案。客户端不再重写传输字段不等于已经替用户关闭面板开关；需完成源头操作并重新获取订阅。尚未访问用户部署或测试真实节点。
 
 ## 个人规则保留与误杀审查
 
@@ -145,7 +145,7 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 修改 INI、底稿或列表后，需要刷新转换器缓存并重新转换，不能只重载已生成的旧 YAML。遇到问题可切回原订阅/旧配置或移除新增的覆写与脚本，原规则文件没有被替换。
 
-已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、35 个域名/进程/回环样例、转换 YAML + 合并 override + 节点调优输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
+已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、35 个域名/进程/回环样例、转换 YAML + 合并 override + 源节点字段保留输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
 
 没有真实机场凭据。使用的节点为 127.0.0.1:9 占位，未发出真实代理流量。此前 5386ff4 版本已通过本机核心 API 检查动态 provider 成员、SEA 归属、AI/模型隔离和缺地区回退；本机 HTTP 对照测试中 REJECT 返回测速失败，DIRECT 测得 1ms。这不是真实节点的延迟测量。
 
@@ -169,7 +169,7 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 主要业务组里的手动选项移到第二位，首位默认值保持原状：视频默认节点选择、谷歌/AI 默认美国、模型默认故障转移、R2 默认 DIRECT。AI 的第二项仍是过滤后的 AI 手动池，不接入普通手动池。
 
-配套 JS 从 2026-10-15 起不再强制重排面板和业务 select 候选：排序由 INI 决定，避免自定义行序被脚本覆盖。必须同时更新 INI 和脚本并重新转换；仅更新脚本不会删除旧 YAML 中的三个服务组。脚本仍处理缺地区回退、provider 手动池 REJECT 常驻项、AI 核心域名保障和自建节点参数。已存选择可能按原组名保留，因此候选第一项是首次默认值，不一定覆盖你之前保存的选择。
+配套 JS 从 2026-10-15 起不再强制重排面板和业务 select 候选：排序由 INI 决定，避免自定义行序被脚本覆盖。必须同时更新 INI 和脚本并重新转换；仅更新脚本不会删除旧 YAML 中的三个服务组。脚本仍处理缺地区回退、provider 手动池 REJECT 常驻项和 AI 核心域名保障。已存选择可能按原组名保留，因此候选第一项是首次默认值，不一定覆盖你之前保存的选择。
 
 值得继续优化的项目：
 
