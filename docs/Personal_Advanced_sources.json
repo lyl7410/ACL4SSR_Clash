@@ -1,51 +1,51 @@
 {
   "date": "2026-10-14",
-  "revision": "review-fixes-simplified",
-  "base_commit": "7e1f6932b0bf0900c694a482e2b45490e7cd1195",
+  "revision": "frequent-services-manual-first",
+  "base_commit": "5386ff4d660e7e24afbbff7a79e4faa18cfb2a90",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/5386ff4d660e7e24afbbff7a79e4faa18cfb2a90/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
@@ -941,18 +941,36 @@
   ],
   "groups": [
     {
-      "name": "🚀 节点选择",
+      "name": "🖐️ 手动切换",
       "type": "select",
       "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
+    },
+    {
+      "name": "📹 油管视频",
+      "type": "select",
+      "refs": [
+        "🚀 节点选择",
+        "🖐️ 手动切换",
         "♻️ 自动选择",
-        "🔄 故障转移",
-        "🇺🇲 美国节点",
+        "🇭🇰 香港节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
-        "🇹🇼 台湾节点",
-        "🇭🇰 香港节点",
+        "🇺🇲 美国节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🔍 谷歌服务",
+      "type": "select",
+      "refs": [
+        "🇺🇲 美国节点",
         "🖐️ 手动切换",
-        "DIRECT"
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点"
       ],
       "regex": null
     },
@@ -961,24 +979,32 @@
       "type": "select",
       "refs": [
         "🇺🇲 美国节点",
+        "🖐️ AI手动切换",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
-        "🇹🇼 台湾节点",
-        "🖐️ AI手动切换"
+        "🇹🇼 台湾节点"
       ],
       "regex": null
+    },
+    {
+      "name": "🖐️ AI手动切换",
+      "type": "select",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
     },
     {
       "name": "📦 模型下载",
       "type": "select",
       "refs": [
         "🔄 故障转移",
+        "🖐️ 手动切换",
         "🇺🇲 美国节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇭🇰 香港节点",
         "🇹🇼 台湾节点",
-        "🖐️ 手动切换",
         "DIRECT"
       ],
       "regex": null
@@ -988,39 +1014,29 @@
       "type": "select",
       "refs": [
         "DIRECT",
+        "🖐️ 手动切换",
+        "🔄 故障转移",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇹🇼 台湾节点",
+        "🇭🇰 香港节点"
+      ],
+      "regex": null
+    },
+    {
+      "name": "🚀 节点选择",
+      "type": "select",
+      "refs": [
+        "♻️ 自动选择",
+        "🖐️ 手动切换",
         "🔄 故障转移",
         "🇺🇲 美国节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
         "🇭🇰 香港节点",
-        "🖐️ 手动切换"
-      ],
-      "regex": null
-    },
-    {
-      "name": "📹 油管视频",
-      "type": "select",
-      "refs": [
-        "🚀 节点选择",
-        "♻️ 自动选择",
-        "🇭🇰 香港节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "🇺🇲 美国节点",
-        "🖐️ 手动切换"
-      ],
-      "regex": null
-    },
-    {
-      "name": "🔍 谷歌服务",
-      "type": "select",
-      "refs": [
-        "🇺🇲 美国节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "🇹🇼 台湾节点",
-        "🖐️ 手动切换"
+        "DIRECT"
       ],
       "regex": null
     },
@@ -1114,17 +1130,6 @@
       "regex": null
     },
     {
-      "name": "🔄 故障转移",
-      "type": "fallback",
-      "refs": [
-        "🖐️ 手动切换"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 120,
-      "tolerance": 50
-    },
-    {
       "name": "🇺🇲 美国节点",
       "type": "url-test",
       "refs": [
@@ -1191,20 +1196,15 @@
       "tolerance": 50
     },
     {
-      "name": "🖐️ 手动切换",
-      "type": "select",
+      "name": "🔄 故障转移",
+      "type": "fallback",
       "refs": [
-        "REJECT"
+        "🖐️ 手动切换"
       ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
-    },
-    {
-      "name": "🖐️ AI手动切换",
-      "type": "select",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 120,
+      "tolerance": 50
     }
   ]
 }
