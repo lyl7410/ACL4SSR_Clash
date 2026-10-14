@@ -6,33 +6,102 @@
     "Synthetic localhost nodes; no live service/proxy/DNS/TUN/download tests",
     "Region isolation is by node labels, not independently verified egress geography"
   ],
-  "rule_count": 14829,
+  "rule_count": 14825,
   "exact_rule_equivalence": true,
   "ai_reachable_nodes": [
-    "REJECT"
+    "ASUS 0.12x",
+    "JP01 NRT clone",
+    "REJECT",
+    "SEA Cloudflare",
+    "SG01 Singapore",
+    "TW01 TPE",
+    "US01 CF自建",
+    "凤凰城 PHX",
+    "反代IP-SEA-21.03M-clone",
+    "波特兰 PDX",
+    "硅谷 SJC",
+    "芝加哥 ORD",
+    "达拉斯 DFW"
   ],
   "model_reachable_nodes": [
+    "ASUS 0.12x",
     "DIRECT",
-    "REJECT"
+    "HK01 HKG CF",
+    "JP01 NRT clone",
+    "REJECT",
+    "SEA Cloudflare",
+    "SG01 Singapore",
+    "TW01 TPE",
+    "US01 CF自建",
+    "凤凰城 PHX",
+    "反代IP-SEA-21.03M-clone",
+    "沪港IEPL-美国",
+    "波特兰 PDX",
+    "硅谷 SJC",
+    "自建HK01",
+    "芝加哥 ORD",
+    "达拉斯 DFW",
+    "🇭🇰 香港优选"
   ],
   "transitive_isolation": "passed",
-  "domain_process_fixtures": 23,
+  "domain_process_fixtures": 24,
   "converted_core": {
     "exit_code": 0,
-    "log": "time=\"2026-10-14T18:18:08.577454100+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T18:18:08.578483100+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T18:18:08.578483100+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T18:18:08.591940900+08:00\" level=info msg=\"Initial configuration complete, total time: 14ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+    "log": "time=\"2026-10-14T20:20:54.856465900+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:54.858586000+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:54.858586000+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:54.887349700+08:00\" level=info msg=\"Initial configuration complete, total time: 30ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
   },
   "merged_override_core": {
     "exit_code": 0,
-    "log": "time=\"2026-10-14T18:18:09.086517100+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T18:18:09.088661600+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T18:18:09.088661600+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T18:18:09.097378800+08:00\" level=info msg=\"Initial configuration complete, total time: 10ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+    "log": "time=\"2026-10-14T20:20:55.403819000+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:55.405364000+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:55.405364000+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:55.412697600+08:00\" level=info msg=\"Initial configuration complete, total time: 8ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
   },
   "node_tuning_core": {
     "exit_code": 0,
-    "log": "time=\"2026-10-14T18:18:09.227607100+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T18:18:09.228122900+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T18:18:09.228122900+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T18:18:09.231759200+08:00\" level=info msg=\"Initial configuration complete, total time: 3ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+    "log": "time=\"2026-10-14T20:20:55.592287400+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:55.592287400+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:55.592287400+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:55.598230000+08:00\" level=info msg=\"Initial configuration complete, total time: 5ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
   },
   "node_tuning": "passed in Node vm; core schema passed",
+  "conditional_fallback_core": {
+    "exit_code": 0,
+    "log": "time=\"2026-10-14T20:20:56.211177400+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:56.213239100+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:56.213239100+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:56.221806800+08:00\" level=info msg=\"Initial configuration complete, total time: 10ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+  },
   "missing_regions_core": {
     "exit_code": 0,
-    "log": "time=\"2026-10-14T18:18:10.384622900+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T18:18:10.387142300+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T18:18:10.387142300+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T18:18:10.393802500+08:00\" level=info msg=\"Initial configuration complete, total time: 9ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+    "log": "time=\"2026-10-14T20:20:57.567095700+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:57.569119400+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:57.569119400+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:57.579703700+08:00\" level=info msg=\"Initial configuration complete, total time: 12ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
   },
-  "status": "passed"
+  "missing_regions_guarded_core": {
+    "exit_code": 0,
+    "log": "time=\"2026-10-14T20:20:58.361456800+08:00\" level=info msg=\"Start initial configuration in progress\"\ntime=\"2026-10-14T20:20:58.362624400+08:00\" level=info msg=\"Geodata Loader mode: memconservative\"\ntime=\"2026-10-14T20:20:58.362624400+08:00\" level=info msg=\"Geosite Matcher implementation: succinct\"\ntime=\"2026-10-14T20:20:58.370268700+08:00\" level=info msg=\"Initial configuration complete, total time: 8ms\"\nconfiguration file <local-test-fixture>.yaml test is successful\n"
+  },
+  "conditional_fallback": "Literal nodes: remove manual competitors in present regions; providers: retain explicit safe manual candidate; may select a different permitted region",
+  "status": "passed",
+  "localhost_core_api_probe": {
+    "full_provider": {
+      "provider_membership": "verified via local Mihomo controller API",
+      "missing_region_manual_fallback": "not applicable",
+      "reject_delay_http_status": 503,
+      "direct_delay": 1,
+      "ai_nodes": [
+        "ASUS 0.12x",
+        "JP01 NRT clone",
+        "SEA Cloudflare",
+        "SG01 Singapore",
+        "TW01 TPE",
+        "US01 CF自建",
+        "凤凰城 PHX",
+        "反代IP-SEA-21.03M-clone",
+        "波特兰 PDX",
+        "硅谷 SJC",
+        "芝加哥 ORD",
+        "达拉斯 DFW"
+      ]
+    },
+    "one_region_provider": {
+      "provider_membership": "verified via local Mihomo controller API",
+      "missing_region_manual_fallback": "verified",
+      "reject_delay_http_status": 503,
+      "direct_delay": "not repeated",
+      "ai_nodes": [
+        "SG01 Singapore"
+      ]
+    },
+    "scope": "Only localhost HTTP and synthetic proxy/provider data; no real subscription, website or TUN traffic"
+  }
 }

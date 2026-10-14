@@ -1,50 +1,51 @@
 {
   "date": "2026-10-14",
-  "base_commit": "effbc4373940c5b9c0e34d232bb772bc9ce194c2",
+  "revision": "review-fixes-simplified",
+  "base_commit": "7e1f6932b0bf0900c694a482e2b45490e7cd1195",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/effbc4373940c5b9c0e34d232bb772bc9ce194c2/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/7e1f6932b0bf0900c694a482e2b45490e7cd1195/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
@@ -703,7 +704,7 @@
       "source": "ACL/UnBan.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🚀 节点选择",
       "url": "[]DOMAIN,challenges.cloudflare.com",
       "source": "inline"
     },
@@ -769,26 +770,6 @@
     },
     {
       "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,huggingface.co",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,hf.co",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,hf.space",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "[]DOMAIN-SUFFIX,xethub.hf.co",
-      "source": "inline"
-    },
-    {
-      "policy": "📦 模型下载",
       "url": "[]DOMAIN-KEYWORD,huggingface",
       "source": "inline"
     },
@@ -816,11 +797,6 @@
       "policy": "📦 模型下载",
       "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/HuggingFace.list",
       "source": "own/HuggingFace.list"
-    },
-    {
-      "policy": "📦 模型下载",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/rule/Personal_Advanced/civitai.list",
-      "source": "own/civitai.list"
     },
     {
       "policy": "📦 模型下载",
@@ -965,143 +941,11 @@
   ],
   "groups": [
     {
-      "name": "🖐️ 手动切换",
-      "type": "select",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(.*).*$"
-    },
-    {
-      "name": "🖐️ AI手动切换",
-      "type": "select",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(.*).*$"
-    },
-    {
-      "name": "♻️ 自动选择",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(.*).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "♻️ AI安全自动",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(.*).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "🇺🇲 美国节点",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇺🇸|美国|美國|洛杉矶|西雅图|\\b(US[0-9]*|USA|United[ _-]?States|LAX|SFO|SEA)\\b).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 100
-    },
-    {
-      "name": "🇯🇵 日本节点",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇯🇵|日本|东京|大阪|\\b(JP[0-9]*|Japan|NRT|KIX)\\b).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "🇸🇬 狮城节点",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇸🇬|新加坡|狮城|\\b(SG[0-9]*|Singapore|SIN)\\b).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "🇹🇼 台湾节点",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(🇹🇼|台湾|台灣|\\b(TW[0-9]*|Taiwan|TPE)\\b).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "🇭🇰 香港节点",
-      "type": "url-test",
-      "refs": [
-        "REJECT"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong)\\b).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50
-    },
-    {
-      "name": "⚡ 优选与自建",
-      "type": "select",
-      "refs": [
-        "🖐️ 手动切换"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$"
-    },
-    {
-      "name": "⚡ AI优选与自建",
-      "type": "select",
-      "refs": [
-        "🖐️ AI手动切换"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$"
-    },
-    {
-      "name": "🔄 优选故障转移",
-      "type": "fallback",
-      "refs": [
-        "♻️ 自动选择"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 120,
-      "tolerance": 50
-    },
-    {
-      "name": "🔄 AI优选故障转移",
-      "type": "fallback",
-      "refs": [
-        "♻️ AI安全自动"
-      ],
-      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|\\b(UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)\\b|🇭🇰|香港|港|\\b(HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)\\b)).*(优选|反代|自建|\\bCF\\b|Cloudflare|clone|\\bSEA\\b|\\bNRT\\b|专线|IEPL|BGP|低倍率|0\\.1(?:x|倍|$|[^0-9])|下载).*$",
-      "url": "http://www.gstatic.com/generate_204",
-      "interval": 120,
-      "tolerance": 50
-    },
-    {
       "name": "🚀 节点选择",
       "type": "select",
       "refs": [
         "♻️ 自动选择",
-        "⚡ 优选与自建",
-        "🔄 优选故障转移",
+        "🔄 故障转移",
         "🇺🇲 美国节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
@@ -1120,10 +964,22 @@
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
-        "⚡ AI优选与自建",
-        "🔄 AI优选故障转移",
-        "♻️ AI安全自动",
         "🖐️ AI手动切换"
+      ],
+      "regex": null
+    },
+    {
+      "name": "📦 模型下载",
+      "type": "select",
+      "refs": [
+        "🔄 故障转移",
+        "🇺🇲 美国节点",
+        "🇯🇵 日本节点",
+        "🇸🇬 狮城节点",
+        "🇭🇰 香港节点",
+        "🇹🇼 台湾节点",
+        "🖐️ 手动切换",
+        "DIRECT"
       ],
       "regex": null
     },
@@ -1132,28 +988,13 @@
       "type": "select",
       "refs": [
         "DIRECT",
-        "🔄 优选故障转移",
-        "⚡ 优选与自建",
+        "🔄 故障转移",
         "🇺🇲 美国节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
-        "🇭🇰 香港节点"
-      ],
-      "regex": null
-    },
-    {
-      "name": "📦 模型下载",
-      "type": "select",
-      "refs": [
-        "🔄 优选故障转移",
-        "⚡ 优选与自建",
-        "🇺🇲 美国节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
         "🇭🇰 香港节点",
-        "🇹🇼 台湾节点",
-        "DIRECT"
+        "🖐️ 手动切换"
       ],
       "regex": null
     },
@@ -1163,11 +1004,11 @@
       "refs": [
         "🚀 节点选择",
         "♻️ 自动选择",
-        "⚡ 优选与自建",
         "🇭🇰 香港节点",
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
-        "🇺🇲 美国节点"
+        "🇺🇲 美国节点",
+        "🖐️ 手动切换"
       ],
       "regex": null
     },
@@ -1179,7 +1020,6 @@
         "🇯🇵 日本节点",
         "🇸🇬 狮城节点",
         "🇹🇼 台湾节点",
-        "⚡ 优选与自建",
         "🖐️ 手动切换"
       ],
       "regex": null
@@ -1193,7 +1033,7 @@
         "🇭🇰 香港节点",
         "🇯🇵 日本节点",
         "🇺🇲 美国节点",
-        "⚡ 优选与自建"
+        "🖐️ 手动切换"
       ],
       "regex": null
     },
@@ -1225,15 +1065,6 @@
       "regex": null
     },
     {
-      "name": "🎯 全球直连",
-      "type": "select",
-      "refs": [
-        "DIRECT",
-        "🚀 节点选择"
-      ],
-      "regex": null
-    },
-    {
       "name": "Ⓜ️ 微软服务",
       "type": "select",
       "refs": [
@@ -1256,6 +1087,15 @@
       "regex": null
     },
     {
+      "name": "🎯 全球直连",
+      "type": "select",
+      "refs": [
+        "DIRECT",
+        "🚀 节点选择"
+      ],
+      "regex": null
+    },
+    {
       "name": "🛑 广告拦截",
       "type": "select",
       "refs": [
@@ -1272,6 +1112,99 @@
         "DIRECT"
       ],
       "regex": null
+    },
+    {
+      "name": "🔄 故障转移",
+      "type": "fallback",
+      "refs": [
+        "🖐️ 手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 120,
+      "tolerance": 50
+    },
+    {
+      "name": "🇺🇲 美国节点",
+      "type": "url-test",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇺🇸|🇺🇲|美国|美國|洛杉矶|西雅图|圣何塞|硅谷|达拉斯|芝加哥|波特兰|凤凰城|亚特兰大|纽约|(?:^|[^A-Za-z0-9])(?:US[0-9]*|USA|United[ _-]?States|LAX|SFO|SEA|SJC|SV|DFW|ORD|PDX|PHX|ATL|NYC|EWR|IAD)(?:$|[^A-Za-z0-9])).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 100
+    },
+    {
+      "name": "🇯🇵 日本节点",
+      "type": "url-test",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇯🇵|日本|东京|大阪|埼玉|川日|泉日|沪日|深日|(?:^|[^A-Za-z0-9])(?:JP[0-9]*|Japan|NRT|KIX|TYO)(?:$|[^A-Za-z0-9])).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇸🇬 狮城节点",
+      "type": "url-test",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇸🇬|新加坡|狮城|(?:^|[^A-Za-z0-9])(?:SG[0-9]*|Singapore|SIN)(?:$|[^A-Za-z0-9])).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇹🇼 台湾节点",
+      "type": "url-test",
+      "refs": [
+        "🖐️ AI手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇹🇼|台湾|台灣|台北|新北|彰化|(?:^|[^A-Za-z0-9])(?:TW[0-9]*|Taiwan|TPE)(?:$|[^A-Za-z0-9])).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🇭🇰 香港节点",
+      "type": "url-test",
+      "refs": [
+        "🖐️ 手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong)(?:$|[^A-Za-z0-9])).*$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "♻️ 自动选择",
+      "type": "url-test",
+      "refs": [
+        "🖐️ 手动切换"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$",
+      "url": "http://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50
+    },
+    {
+      "name": "🖐️ 手动切换",
+      "type": "select",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
+    },
+    {
+      "name": "🖐️ AI手动切换",
+      "type": "select",
+      "refs": [
+        "REJECT"
+      ],
+      "regex": "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9])|🇭🇰|香港|港|(?:^|[^A-Za-z0-9])(?:HK[0-9]*|HKG|Hong[ _-]?Kong[0-9]*)(?:$|[^A-Za-z0-9]))).+$"
     }
   ]
 }
