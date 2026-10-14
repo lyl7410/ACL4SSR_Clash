@@ -56,12 +56,12 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
   nameserver-policy:
-    +.openai.com: https://1.1.1.1/dns-query#🤖 AI 专线
-    +.chatgpt.com: https://1.1.1.1/dns-query#🤖 AI 专线
-    +.anthropic.com: https://1.1.1.1/dns-query#🤖 AI 专线
-    +.claude.ai: https://1.1.1.1/dns-query#🤖 AI 专线
-    +.gemini.google.com: https://1.1.1.1/dns-query#🤖 AI 专线
-    +.generativelanguage.googleapis.com: https://1.1.1.1/dns-query#🤖 AI 专线
+    +.openai.com: https://1.1.1.1/dns-query#🤖 AI
+    +.chatgpt.com: https://1.1.1.1/dns-query#🤖 AI
+    +.anthropic.com: https://1.1.1.1/dns-query#🤖 AI
+    +.claude.ai: https://1.1.1.1/dns-query#🤖 AI
+    +.gemini.google.com: https://1.1.1.1/dns-query#🤖 AI
+    +.generativelanguage.googleapis.com: https://1.1.1.1/dns-query#🤖 AI
     +.civitai.com: https://1.1.1.1/dns-query#📦 模型下载
     +.civitai.red: https://1.1.1.1/dns-query#📦 模型下载
     +.huggingface.co: https://1.1.1.1/dns-query#📦 模型下载

@@ -3,29 +3,14 @@
 function main(config) {
   // Guard core OpenAI domains even if an older media list precedes the AI list.
   // Skip profiles without the policy, avoiding dangling rule references.
-  if ((config["proxy-groups"] || []).some(group => group.name === "🤖 AI 专线")) {
+  if ((config["proxy-groups"] || []).some(group => group.name === "🤖 AI")) {
     const aiRules = ["chatgpt.com", "openai.com", "oaistatic.com", "oaiusercontent.com"]
-      .map(domain => "DOMAIN-SUFFIX," + domain + ",🤖 AI 专线");
+      .map(domain => "DOMAIN-SUFFIX," + domain + ",🤖 AI");
     const guards = new Set(aiRules);
     config.rules = aiRules.concat((config.rules || []).filter(rule => !guards.has(rule)));
   }
-  // Frequent services and manual cards first; also applies to cached converted profiles.
-  const panelOrder = ["🖐️ 手动切换", "📹 油管视频", "🔍 谷歌服务", "🤖 AI 专线", "🖐️ AI手动切换", "📦 模型下载", "⚡ R2直连加速", "🚀 节点选择", "📲 电报与社媒", "🎵 Spotify", "🎬 国际媒体", "Ⓜ️ 微软服务", "🍎 苹果服务", "🎯 全球直连", "🛑 广告拦截", "🐟 漏网之鱼", "🇺🇲 美国节点", "🇯🇵 日本节点", "🇸🇬 狮城节点", "🇹🇼 台湾节点", "🇭🇰 香港节点", "♻️ 自动选择", "🔄 故障转移"];
-  const panelRank = new Map(panelOrder.map((name, index) => [name, index]));
-  config["proxy-groups"] = (config["proxy-groups"] || []).map((group, index) => ({group, index}))
-    .sort((a, b) => (panelRank.has(a.group.name) ? panelRank.get(a.group.name) : 1000 + a.index)
-      - (panelRank.has(b.group.name) ? panelRank.get(b.group.name) : 1000 + b.index))
-    .map(item => item.group);
-  const manualEntries = {"🚀 节点选择":"🖐️ 手动切换", "📹 油管视频":"🖐️ 手动切换",
-    "🔍 谷歌服务":"🖐️ 手动切换", "📦 模型下载":"🖐️ 手动切换",
-    "⚡ R2直连加速":"🖐️ 手动切换", "🤖 AI 专线":"🖐️ AI手动切换"};
-  for (const group of config["proxy-groups"]) {
-    const manual = manualEntries[group.name];
-    if (!manual || !Array.isArray(group.proxies) || !group.proxies.includes(manual)
-        || group.proxies[0] === manual) continue;
-    const first = group.proxies[0];
-    group.proxies = [first, manual].concat(group.proxies.slice(1).filter(name => name !== manual));
-  }
+  // Preserve group and select-candidate order from the converted INI.
+  // Only conditional measurement-pool fallbacks are adjusted below.
   const realNodes = new Set((config.proxies || []).map(n => n.name));
   const backups = {
     "♻️ 自动选择": "🖐️ 手动切换",

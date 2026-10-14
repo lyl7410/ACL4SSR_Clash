@@ -1,6 +1,6 @@
 # Clash 个人高阶分流与大文件下载配置
 
-版本：2026-10-14，上游维护规则与个人例外精简版。面向 Clash Verge Rev / Mihomo，采用服务分组、地区自动选择与一个共享故障转移池，通用业务直接使用已核实的 MetaCubeX、ACL4SSR、blackmatrix7 上游规则，个人部分仅保留四份按策略整理的例外。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
+版本：2026-10-15，20 组精简与自由排序版。面向 Clash Verge Rev / Mihomo，采用服务分组、地区自动选择与一个共享故障转移池，通用业务直接使用已核实的 MetaCubeX、ACL4SSR、blackmatrix7 上游规则，个人部分仅保留四份按策略整理的例外。实际语法验证核心：Mihomo v1.19.32；实际转换器：SubConverter-Extended v1.9.14。
 
 ## 文件入口
 
@@ -30,7 +30,7 @@ https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/main/Clash/config/Person
 
 1. 在自己的 Subconverter / SubConverter-Extended 前端选择 Clash 输出，传入机场订阅，并把上面的 INI 直链填写到“远程配置/外部配置”项。自建本机转换器可避免把机场 URL 交给公共转换站。
 2. 转换接口参数为 `target=clash`、`url=<机场订阅 URL>`、`config=<INI 直链>`；参数要 URL 编码。转换器还必须能下载 INI 引用的基础 YAML、个人例外列表和上游分支的公共列表。
-3. 将转换后的 YAML 导入 Clash Verge Rev。首次确认 `🤖 AI 专线` 默认美国、`⚡ R2直连加速` 默认 DIRECT、`📦 模型下载` 默认通用故障转移。
+3. 将转换后的 YAML 导入 Clash Verge Rev。首次确认 `🤖 AI` 默认美国、`⚡ R2直连加速` 默认 DIRECT、`📦 模型下载` 默认通用故障转移。
 4. 转换结果已经通过 base.yaml 带上 override 参数。如果客户端会重写 DNS 等字段，或使用自己的转换底稿，在该订阅的 **YAML 合并/覆写编辑器** 应用 override.yaml，并检查最终运行配置。不要把 YAML 粘贴到 JavaScript 脚本编辑器。
 5. 将 node_tuning.js 放入该订阅的 **JavaScript 脚本扩展**。它处理地区回退以及 provider 手动池的空池行为；传输参数调优只作用于 `proxies` 中按名称识别的自建节点。provider 内的节点传输参数需要在节点源或订阅预处理中修改。
 6. 先测试系统代理，再在 Verge 中以必要的服务/管理员权限启用 TUN。底稿默认 TUN 关闭；单纯设置进程规则不代表应用所有流量已被接管。
@@ -46,12 +46,12 @@ Clash Verge Rev 的编辑器名称随版本不同。YAML 片段走 Merge，`func
 | 1 | LocalAreaNetwork、UnBan | 全球直连 |
 | 2 | 精确 challenges.cloudflare.com 兼容规则 | 普通节点选择，避免强绑 AI 组及被其他列表提前捕获 |
 | 3 | BanProgramAD、BanAD | 广告拦截，默认 REJECT |
-| 4 | MetaCubeX OpenAI、Anthropic、Gemini、GitHub Copilot、xAI、Bing（含微软 Copilot） | AI 专线 |
+| 4 | MetaCubeX OpenAI、Anthropic、Gemini、GitHub Copilot、xAI、Bing（含微软 Copilot） | AI |
 | 5 | civitai.delivery、r2.cloudflarestorage.com | R2直连加速，默认 DIRECT |
 | 6 | Civitai 主站/镜像/关键字、对象存储、HF/Xet、GitHub 资源、PyTorch、Lykos | 模型下载 |
 | 7 | StabilityMatrix.exe / StabilityMatrix 进程兜底 | 模型下载 |
-| 8 | Holodex/YouTube、Google FCM/Google、Telegram/Twitter、上游 Spotify | 各自业务组 |
-| 9 | Developer、GitHub 页面、国际媒体、微软/OneDrive、苹果 | 对应业务组 |
+| 8 | Holodex/YouTube、Google FCM/Google、Telegram/Twitter；Spotify | 视频、谷歌、社媒；Spotify 进入国际媒体 |
+| 9 | Developer、GitHub 页面、国际媒体；微软/OneDrive、苹果 | 对应业务组；微软和苹果进入全球直连（更早 AI/Developer 等规则优先） |
 | 10 | 上游 Tencent（含微信）、个人 Direct/Proxy 剩余例外；GFW 泛代理 | 个人意图及普通代理 |
 | 11 | ChinaDomain、ChinaCompanyIp、Download、GEOIP CN no-resolve | 全球直连 |
 | 12 | FINAL | 漏网之鱼 |
@@ -66,7 +66,7 @@ GitHub 的分离是按**目标域名**完成：github.com 普通页面走节点�
 
 AI 默认美国，候选为美、日、新、台和一个 AI 安全手动入口。不再复制 AI 优选、AI 自动、AI 故障转移等底层组，也不引用包含香港的普通节点选择/手动/故障转移池。
 
-订阅全部是 Cloudflare 搭建，因此“优选与自建”没有区分作用，已全部移除。普通业务与模型共用一个 `🔄 故障转移` 池；不能凭“CF/优选”的名字认定某节点性能更好。面板最前依次是普通手动、油管、谷歌、AI、AI手动、模型下载、R2、节点选择；次要业务随后，地区与测速池沉底。总计 23 组，AI 专用分组只保留业务入口和安全手动入口。
+订阅全部是 Cloudflare 搭建，因此“优选与自建”没有区分作用，已全部移除。普通业务与模型共用一个 `🔄 故障转移` 池；不能凭“CF/优选”的名字认定某节点性能更好。面板最前依次是普通手动、油管、谷歌、AI、AI手动、模型下载、R2、节点选择；次要业务随后，地区与测速池沉底。总计 20 组，AI 专用分组只保留业务入口和安全手动入口。
 
 普通/模型池及香港组排除英国；美/日/新/台和 AI 手动池额外排除香港。检测 UK/GB/London、中文、国旗及沪英/深英等转发标签，也支持“自建HK01”这种中文连写的标签。正则使用 ASCII 字母数字边界，避免 Unicode 单词边界或转换转义造成代码漏匹配。名字过滤仍不能证明真实出口国家，应验证实际 egress。
 
@@ -129,7 +129,7 @@ Sniffer 启用 parse-pure-ip，HTTP 覆盖 80、8080-8880，TLS/QUIC 覆盖 443/
 
 通用 AI/Google/Spotify/Twitter/微信业务改由上游承接，不能保证与每一条旧个人规则逐字等价：旧 AI 中的共享 auth0/statsig、过宽 Google 关键字和固定服务 IP 不再沿用。x.com 使用社媒线路；国内 AI 保留 Direct 例外；模型规则统一到 ModelDownload。Direct 合并原 direct 与上游尚未覆盖的微信域名，Proxy 继承 vpn 中的个性化站点。已被更早业务规则覆盖的个人重复条目从新列表移除，sources.json 的 personal_coverage 记录具体来源和目标组。原始文件不被改写。
 
-AI 使用 MetaCubeX 的细分 geosite classical 清单，而非 category-ai-!cn：后者包含 Hugging Face，会抢占模型下载线路。六份 AI 清单在此次审查中均为域名规则，没有 ASN/CIDR，不把整个共享支付、证书或 Cloudflare 网络送到 AI；OpenAI 清单仍含精确的 Datadog 遥测主机及 LiveKit 子域，可能影响同一精确主机的其他使用方。Bing 清单会将 Bing 搜索与微软 Copilot 一并交给 AI 专线，不是仅识别对话请求。
+AI 使用 MetaCubeX 的细分 geosite classical 清单，而非 category-ai-!cn：后者包含 Hugging Face，会抢占模型下载线路。六份 AI 清单在此次审查中均为域名规则，没有 ASN/CIDR，不把整个共享支付、证书或 Cloudflare 网络送到 AI；OpenAI 清单仍含精确的 Datadog 遥测主机及 LiveKit 子域，可能影响同一精确主机的其他使用方。Bing 清单会将 Bing 搜索与微软 Copilot 一并交给 AI，不是仅识别对话请求。
 
 微信由 MetaCubeX tencent 域名清单与个人剩余例外承接，范围包含其他腾讯服务。未采用 blackmatrix7 WeChat 中的腾讯 ASN 132203，以免新增 ASN 数据库依赖和按整段网络分流。广告仍只加载 BanProgramAD、BanAD；“轻量”不等于不会误杀，有问题先将广告组切为 DIRECT 并核对具体命中项。
 
@@ -145,7 +145,7 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 修改 INI、底稿或列表后，需要刷新转换器缓存并重新转换，不能只重载已生成的旧 YAML。遇到问题可切回原订阅/旧配置或移除新增的覆写与脚本，原规则文件没有被替换。
 
-已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、28 个域名/进程/回环样例、转换 YAML + 合并 override + 节点调优输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
+已完成：实际 Extended 转换、规则顺序对照、策略/DNS 引用检查、AI/模型全链路候选隔离、35 个域名/进程/回环样例、转换 YAML + 合并 override + 节点调优输出 + 缺地区样例的 Mihomo -t。节点调优 JS 在 Node vm 中运行并检查输出，未在实际 Verge UI 内执行。
 
 没有真实机场凭据。使用的节点为 127.0.0.1:9 占位，未发出真实代理流量。此前 5386ff4 版本已通过本机核心 API 检查动态 provider 成员、SEA 归属、AI/模型隔离和缺地区回退；本机 HTTP 对照测试中 REJECT 返回测速失败，DIRECT 测得 1ms。这不是真实节点的延迟测量。
 
@@ -169,7 +169,7 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 
 主要业务组里的手动选项移到第二位，首位默认值保持原状：视频默认节点选择、谷歌/AI 默认美国、模型默认故障转移、R2 默认 DIRECT。AI 的第二项仍是过滤后的 AI 手动池，不接入普通手动池。
 
-配套 JS 除回退/节点调优外也统一卡片和候选顺序，旧转换结果应用新脚本后可以整理排列。建议同时更新 INI、重新转换并更新脚本，避免转换器或其他覆写保留旧顺序。脚本调整不重命名组；已存的节点选择通常继续按原组名保留，以客户端实际选择为准。
+配套 JS 从 2026-10-15 起不再强制重排面板和业务 select 候选：排序由 INI 决定，避免自定义行序被脚本覆盖。必须同时更新 INI 和脚本并重新转换；仅更新脚本不会删除旧 YAML 中的三个服务组。脚本仍处理缺地区回退、provider 手动池 REJECT 常驻项、AI 核心域名保障和自建节点参数。已存选择可能按原组名保留，因此候选第一项是首次默认值，不一定覆盖你之前保存的选择。
 
 值得继续优化的项目：
 
@@ -177,15 +177,15 @@ MetaCubeX OpenAI 清单含 DOMAIN-REGEX，本次已确认 Extended v1.9.14 转�
 - **认识共享手动入口**：油管、谷歌、模型若都选普通手动，修改手动节点会一起影响它们。需要独立时可给对应业务组增加直接选节点的能力，优先复用现有池，不再复制大量底层分组。
 - **保留少量诊断开关**：R2 默认 DIRECT；下载失败时仅切换 R2 组对比代理，验证问题先核对普通总控与当前网站的出口，避免同时改 DNS/Hosts/节点而无法定位原因。
 
-本次实际转换、核心检查及旧缓存排列修复测试通过，为 23 组、15,456 条转换规则（含四条 OpenAI 核心域名内联保障）。地区过滤保持不变。
+本次实际转换、核心检查及自定义排序保留测试通过，为 20 组、15,456 条转换规则（含四条 OpenAI 核心域名内联保障）。地区过滤保持不变。
 
 ### Codex / ChatGPT 误入国际媒体的修复
 
 用户提供的连接是 `chatgpt.com:443`、进程 `codex.exe`，命中 `DomainSuffix(chatgpt.com)`，却进入国际媒体。当时的 AI.list 已收录该域名且按模板应先于媒体规则；上游 ProxyMedia.list 也包含 chatgpt.com。因此该链路与预期不符，但仅凭连接详情不能确定是转换缓存、AI 清单加载失败、后续扩展覆盖顺序，还是旧连接仍保留原路径。
 
-INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic.com`、`oaiusercontent.com` 四个后缀。配套 JS 在存在 AI 专线组时，将这四条规则移至规则表最前并去除相同保障规则的重复项；没有 AI 组则跳过，避免引用不存在的策略。脚本不将整个 codex.exe 或通用子进程强制分流。
+INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic.com`、`oaiusercontent.com` 四个后缀。配套 JS 在存在 AI组时，将这四条规则移至规则表最前并去除相同保障规则的重复项；没有 AI 组则跳过，避免引用不存在的策略。脚本不将整个 codex.exe 或通用子进程强制分流。
 
-更新并重新转换 INI（清理转换缓存），同时替换 Verge 订阅脚本；脚本需在其他会替换 rules 的扩展之后执行。检查最终运行配置前四条规则，再关闭旧的 Codex/chatgpt.com 连接或完全退出重启 Codex，观察新连接应经过 AI 专线。只刷新配置不能保证既有长连接重新选路。无需修改 Token、Cookie 或登录配置。
+更新并重新转换 INI（清理转换缓存），同时替换 Verge 订阅脚本；脚本需在其他会替换 rules 的扩展之后执行。检查最终运行配置前四条规则，再关闭旧的 Codex/chatgpt.com 连接或完全退出重启 Codex，观察新连接应经过 AI。只刷新配置不能保证既有长连接重新选路。无需修改 Token、Cookie 或登录配置。
 
 已用“移除所有 AI 规则、将 chatgpt.com 媒体规则置首”的模拟配置验证四个域名恢复 AI 分流、其他媒体规则保留、脚本重复执行结果一致及无 AI 策略时跳过；修复后的 YAML 通过 Mihomo 配置检查。未操作用户当前客户端，未测试真实机场或 OpenAI 联网。
 
@@ -227,4 +227,22 @@ INI 现在在远程 AI 清单前内联 `chatgpt.com`、`openai.com`、`oaistatic
 
 通用业务直接修改上游选型或更新转换结果，无需在本仓库维护 Google、Spotify、Twitter、AI 的复制品。Holodex 仅保留一条内联规则，避免为单个域名再建一个文件。四条 OpenAI 内联规则和脚本前置保障继续保留，用于远程 AI 清单加载异常时的核心域名回退。
 
-总计 41 条 ruleset 声明、23 个策略组；本次快照转换后 15,456 条规则。条目总数会随上游分支更新而变化。四份个人列表使用标准无策略列 .list 格式，不能将不同目标策略随意合并成一个文件。
+总计 41 条 ruleset 声明、20 个策略组；本次快照转换后 15,456 条规则。条目总数会随上游分支更新而变化。四份个人列表使用标准无策略列 .list 格式，不能将不同目标策略随意合并成一个文件。
+
+## 微软、苹果、Spotify 与自定义排序（2026-10-15）
+
+微软和苹果的独立组原本都默认全球直连；在没有经常单独切换出口的需求时，保留独立卡片价值有限。新版本删除这两个业务组，公共 OneDrive/Microsoft/Apple 规则依然保留，统一指向全球直连。更早的 AI、模型、Developer 等规则仍优先匹配：微软 Copilot 继续走 AI，部分 Apple Developer 域名仍可能走开发者代理。常规直连可用性取决于本地网络，不保证所有海外接口或 OneDrive 大文件同样顺畅；若仅某域名有问题，应在泛直连规则前增加该域名的节点选择例外，避免为它切换整个全球直连组。
+
+Spotify 清单继续直接引用 blackmatrix7，目标改为国际媒体，删除独立 Spotify 卡片。Spotify 和其他国际媒体会共享该业务组当前选择，无法继续分别保存业务出口；如需不同地区再恢复独立业务组。
+
+自定义排列的三个层次：
+
+1. 移动完整 `custom_proxy_group=` 行：改变配置中的组显示顺序，不改变域名分流和策略引用；允许先引用后声明组，已通过转换检查。客户端自己的排序选项、显示模式或其他扩展仍可能影响最终面板。
+2. 调整同一 select 行内的候选：改变候选显示顺序和首次默认项。保留 AI 组的隔离关系；不要把普通手动、香港或普通节点选择加入 AI 候选。fallback 的成员顺序影响故障转移优先级，也不只是显示调整。
+3. 调整 `ruleset=` 行：改变实际匹配优先级，不能按面板喜好随意移动。AI 必须先于通用 Google/媒体，R2 必须先于模型域名/进程规则，国内泛直连和 FINAL 保持末尾。
+
+修改组名需同步所有候选、ruleset、DNS policy 和脚本引用，单纯移动行无需改名。脚本已验证保留逆序面板和自定义业务候选顺序；底层手动 provider 池的 REJECT 处理及测速池回退仍是必要的语义调整。
+
+当前建议保持二十组结构，不增加负载均衡池。Holodex 与 YouTube 共用视频组；AI 和模型下载优先固定稳定出口。普通手动池同时被油管、谷歌、模型引用时，修改该池选中节点会同时影响这些业务；需要独立出口时先在各业务组选择不同地区或直接挂载已验证节点，不必复制一套自动池。
+
+此次保留 GitHub 上已作的组名简化“🤖 AI”，并同步 base.yaml、override.yaml 的 DNS policy 与 JS 核心域名保障。改名会使旧组名保存的选择不能直接复用，更新后请核对 AI 当前选中节点。

@@ -1,51 +1,51 @@
 {
-  "date": "2026-10-14",
-  "revision": "maintained-upstreams-personal-consolidated",
-  "base_commit": "4fc551c00d14a407232e285285c321b38619dc78",
+  "date": "2026-10-15",
+  "revision": "compact-panel-ini-order-authoritative",
+  "base_commit": "e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f",
   "sources": [
     {
       "name": "personal/Ai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/Ai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/Ai.list",
       "sha256": "19cccd774ccf380c50237a1868cfd8182c25edfd6f5fdb50a8e9cdc48a102a63"
     },
     {
       "name": "personal/civitai.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/civitai.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/civitai.list",
       "sha256": "a8b540de45d889f91e4303e31ce2cbaa74f9fc2a44ddce6d5d5d593409c81c7e"
     },
     {
       "name": "personal/direct.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/direct.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/direct.list",
       "sha256": "8c634dcd78b2d8db1e624db3329cead5f2ce675428ec6b185c0cf4cbccaa7f41"
     },
     {
       "name": "personal/Google Gemini.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/Google%20Gemini.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/Google%20Gemini.list",
       "sha256": "63bea7c73380b703f0d6acccc35441be0de0ffb602968efef1a4c5d2f6216731"
     },
     {
       "name": "personal/google.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/google.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/google.list",
       "sha256": "3b4a1ca7f5b268e30bf77a20e5e67013927d042f95911ddcca079b8bbc510819"
     },
     {
       "name": "personal/spotify.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/spotify.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/spotify.list",
       "sha256": "a39c31288714284c194c692a98cc7649e81b60e99db395c33d7577687018ed20"
     },
     {
       "name": "personal/twitter.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/twitter.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/twitter.list",
       "sha256": "c48bf7a11130265e5eb4eb6a49dce9f4fcad9a163fbcd1509fa31c6596f94e12"
     },
     {
       "name": "personal/vpn.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/vpn.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/vpn.list",
       "sha256": "001f69210c186fb528d2ce256e0ce06cd4d9867173e785d011b6d9cb0fd26cd6"
     },
     {
       "name": "personal/WeChat.list",
-      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/4fc551c00d14a407232e285285c321b38619dc78/rule/WeChat.list",
+      "url": "https://raw.githubusercontent.com/lyl7410/ACL4SSR_Clash/e58fa9ea3ffd3661dbf8b62bd22b934e1238e56f/rule/WeChat.list",
       "sha256": "cb2d847ee7a1948b61c845c09d3444ab1b8ef6dcee745530b8b52ddcfc889bd8"
     },
     {
@@ -856,52 +856,52 @@
       "source": "ACL/BanAD.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "[]DOMAIN-SUFFIX,chatgpt.com",
       "source": "inline"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "[]DOMAIN-SUFFIX,openai.com",
       "source": "inline"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "[]DOMAIN-SUFFIX,oaistatic.com",
       "source": "inline"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "[]DOMAIN-SUFFIX,oaiusercontent.com",
       "source": "inline"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.list",
       "source": "META/openai.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.list",
       "source": "META/anthropic.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.list",
       "source": "META/google-gemini.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github-copilot.list",
       "source": "META/github-copilot.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.list",
       "source": "META/xai.list"
     },
     {
-      "policy": "🤖 AI 专线",
+      "policy": "🤖 AI",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.list",
       "source": "META/bing.list"
     },
@@ -946,7 +946,7 @@
       "source": "BM/Twitter.list"
     },
     {
-      "policy": "🎵 Spotify",
+      "policy": "🎬 国际媒体",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.list",
       "source": "BM/Spotify.list"
     },
@@ -976,17 +976,17 @@
       "source": "ACL/ProxyMedia.list"
     },
     {
-      "policy": "Ⓜ️ 微软服务",
+      "policy": "🎯 全球直连",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.list",
       "source": "BM/OneDrive.list"
     },
     {
-      "policy": "Ⓜ️ 微软服务",
+      "policy": "🎯 全球直连",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list",
       "source": "BM/Microsoft.list"
     },
     {
-      "policy": "🍎 苹果服务",
+      "policy": "🎯 全球直连",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list",
       "source": "BM/Apple.list"
     },
@@ -1072,7 +1072,7 @@
       "regex": null
     },
     {
-      "name": "🤖 AI 专线",
+      "name": "🤖 AI",
       "type": "select",
       "refs": [
         "🇺🇲 美国节点",
@@ -1151,19 +1151,6 @@
       "regex": null
     },
     {
-      "name": "🎵 Spotify",
-      "type": "select",
-      "refs": [
-        "🚀 节点选择",
-        "🖐️ 手动切换",
-        "🇺🇲 美国节点",
-        "🇯🇵 日本节点",
-        "🇸🇬 狮城节点",
-        "DIRECT"
-      ],
-      "regex": null
-    },
-    {
       "name": "🎬 国际媒体",
       "type": "select",
       "refs": [
@@ -1174,28 +1161,6 @@
         "🇯🇵 日本节点",
         "🇺🇲 美国节点",
         "🖐️ 手动切换"
-      ],
-      "regex": null
-    },
-    {
-      "name": "Ⓜ️ 微软服务",
-      "type": "select",
-      "refs": [
-        "🎯 全球直连",
-        "🚀 节点选择",
-        "🇺🇲 美国节点",
-        "🇭🇰 香港节点"
-      ],
-      "regex": null
-    },
-    {
-      "name": "🍎 苹果服务",
-      "type": "select",
-      "refs": [
-        "🎯 全球直连",
-        "🚀 节点选择",
-        "🇺🇲 美国节点",
-        "🇭🇰 香港节点"
       ],
       "regex": null
     },
@@ -1304,6 +1269,7 @@
       "tolerance": 50
     }
   ],
+  "tracking_url_verification_date": "2026-10-14",
   "tracking_url_verification": [
     {
       "name": "ACL/BanAD.list",
