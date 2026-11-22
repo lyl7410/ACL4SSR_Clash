@@ -10,7 +10,7 @@ tun:
   strict-route: true
   dns-hijack:
   - any:53
-find-process-mode: off
+find-process-mode: strict
 tcp-concurrent: true
 unified-delay: true
 keep-alive-idle: 15
