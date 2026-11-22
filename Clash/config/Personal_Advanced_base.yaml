@@ -1,6 +1,6 @@
 mixed-port: 7890
 mode: rule
-allow-lan: false
+allow-lan: true
 log-level: info
 tun:
   enable: false
@@ -10,7 +10,7 @@ tun:
   strict-route: true
   dns-hijack:
   - any:53
-find-process-mode: strict
+find-process-mode: off
 tcp-concurrent: true
 unified-delay: true
 keep-alive-idle: 15
@@ -34,17 +34,8 @@ dns:
   - +.home.arpa
   - +.msftconnecttest.com
   - +.msftncsi.com
-  - +.civitai.com
-  - +.civitai.red
   - +.civitai.delivery
-  - +.civitai.tv
-  - +.civitai.link
   - +.r2.cloudflarestorage.com
-  - +.huggingface.co
-  - +.hf.co
-  - +.hf.space
-  - +.xethub.hf.co
-  - +.githubusercontent.com
   - +.download.pytorch.org
   default-nameserver:
   - 223.5.5.5
@@ -56,20 +47,19 @@ dns:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
   nameserver-policy:
-    +.openai.com: https://1.1.1.1/dns-query#🤖 AI
-    +.chatgpt.com: https://1.1.1.1/dns-query#🤖 AI
-    +.anthropic.com: https://1.1.1.1/dns-query#🤖 AI
-    +.claude.ai: https://1.1.1.1/dns-query#🤖 AI
-    +.gemini.google.com: https://1.1.1.1/dns-query#🤖 AI
-    +.generativelanguage.googleapis.com: https://1.1.1.1/dns-query#🤖 AI
-    +.civitai.com: https://1.1.1.1/dns-query#📦 模型下载
-    +.civitai.red: https://1.1.1.1/dns-query#📦 模型下载
-    +.huggingface.co: https://1.1.1.1/dns-query#📦 模型下载
-    +.hf.co: https://1.1.1.1/dns-query#📦 模型下载
+    +.openai.com: https://dns.google/dns-query#🤖 AI
+    +.chatgpt.com: https://dns.google/dns-query#🤖 AI
+    +.anthropic.com: https://dns.google/dns-query#🤖 AI
+    +.claude.ai: https://dns.google/dns-query#🤖 AI
+    +.gemini.google.com: https://dns.google/dns-query#🤖 AI
+    +.generativelanguage.googleapis.com: https://dns.google/dns-query#🤖 AI
     +.civitai.delivery:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
     +.r2.cloudflarestorage.com:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    +.download.pytorch.org:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
 sniffer:
