@@ -1,4 +1,4 @@
-// Clash Verge Rev script: AI guard, manual recovery and civitai-only quota checks.
+// Clash Verge Rev script: AI guard, manual recovery and non-UK lazy 900s checks.
 // Legacy filename retained; node transport fields are preserved unchanged.
 // Apply after using Personal_Advanced.ini. This is not a Mihomo YAML file.
 function main(config) {
@@ -11,7 +11,7 @@ function main(config) {
     config.rules = aiRules.concat((config.rules || []).filter(rule => !guards.has(rule)));
   }
   // Keep panel order, node fields and provider transport/download settings intact.
-  const poolFilter = "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).*(civitai).*$";
+  const poolFilter = "(?i)^(?!.*(🇬🇧|英国|英國|伦敦|倫敦|沪英|深英|京英|英区|(?:^|[^A-Za-z0-9])(?:UK[0-9]*|GB[0-9]*|London|United[ _-]?Kingdom[0-9]*)(?:$|[^A-Za-z0-9]))).+$";
   const poolRegex = new RegExp(poolFilter.replace("(?i)", ""), "i");
   const testUrl = "http://www.gstatic.com/generate_204";
   const regionNames = new Set(["🇺🇲 美国节点", "🇯🇵 日本节点", "🇸🇬 狮城节点", "🇹🇼 台湾节点", "🇭🇰 香港节点"]);
@@ -38,8 +38,8 @@ function main(config) {
     }
     if (!autoNames.has(group.name)) continue;
     // A visible select wrapper exposes manual recovery without health-checking it.
-    // The hidden engine contains only matching nodes; provider membership is dynamic.
-    const engineName = group.name === "♻️ 自动选择" ? "内部·civitai自动" : "内部·civitai故障转移";
+    // The hidden engine contains matching non-UK nodes; provider membership is dynamic.
+    const engineName = group.name === "♻️ 自动选择" ? "内部·自动选择" : "内部·故障转移";
     const existing = (config["proxy-groups"] || []).find(g => g.name === engineName);
     const engine = existing || Object.assign({}, group);
     engine.name = engineName;
