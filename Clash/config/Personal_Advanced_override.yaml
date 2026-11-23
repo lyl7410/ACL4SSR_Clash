@@ -3,6 +3,7 @@
 # Optional verified Hosts only: replace hosts: {} with YOUR tested IP.
 # Example format (disabled): hosts: {civitai.delivery: 104.18.32.47}
 # Never assume example IPs are currently valid/fast or suitable for every R2 hostname.
+allow-lan: true
 find-process-mode: strict
 tcp-concurrent: true
 unified-delay: true
@@ -15,10 +16,12 @@ profile:
 hosts: {}
 dns:
   enable: true
+  cache-algorithm: arc
   ipv6: false
   use-hosts: true
   use-system-hosts: true
   enhanced-mode: fake-ip
+  fake-ip-ttl: 1
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
@@ -27,17 +30,8 @@ dns:
   - +.home.arpa
   - +.msftconnecttest.com
   - +.msftncsi.com
-  - +.civitai.com
-  - +.civitai.red
   - +.civitai.delivery
-  - +.civitai.tv
-  - +.civitai.link
   - +.r2.cloudflarestorage.com
-  - +.huggingface.co
-  - +.hf.co
-  - +.hf.space
-  - +.xethub.hf.co
-  - +.githubusercontent.com
   - +.download.pytorch.org
   default-nameserver:
   - 223.5.5.5
@@ -45,26 +39,28 @@ dns:
   proxy-server-nameserver:
   - https://dns.alidns.com/dns-query
   - https://doh.pub/dns-query
+  direct-nameserver:
+  - https://dns.alidns.com/dns-query#disable-qtype-65=true
+  - https://doh.pub/dns-query#disable-qtype-65=true
   nameserver:
-  - https://dns.alidns.com/dns-query
-  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query#disable-qtype-65=true
+  - https://doh.pub/dns-query#disable-qtype-65=true
   nameserver-policy:
-    +.openai.com: https://1.1.1.1/dns-query#🤖 AI
-    +.chatgpt.com: https://1.1.1.1/dns-query#🤖 AI
-    +.anthropic.com: https://1.1.1.1/dns-query#🤖 AI
-    +.claude.ai: https://1.1.1.1/dns-query#🤖 AI
-    +.gemini.google.com: https://1.1.1.1/dns-query#🤖 AI
-    +.generativelanguage.googleapis.com: https://1.1.1.1/dns-query#🤖 AI
-    +.civitai.com: https://1.1.1.1/dns-query#📦 模型下载
-    +.civitai.red: https://1.1.1.1/dns-query#📦 模型下载
-    +.huggingface.co: https://1.1.1.1/dns-query#📦 模型下载
-    +.hf.co: https://1.1.1.1/dns-query#📦 模型下载
+    +.openai.com: https://dns.google/dns-query#🤖 AI
+    +.chatgpt.com: https://dns.google/dns-query#🤖 AI
+    +.anthropic.com: https://dns.google/dns-query#🤖 AI
+    +.claude.ai: https://dns.google/dns-query#🤖 AI
+    +.gemini.google.com: https://dns.google/dns-query#🤖 AI
+    +.generativelanguage.googleapis.com: https://dns.google/dns-query#🤖 AI
     +.civitai.delivery:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#disable-qtype-65=true
+    - https://doh.pub/dns-query#disable-qtype-65=true
     +.r2.cloudflarestorage.com:
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+    - https://dns.alidns.com/dns-query#disable-qtype-65=true
+    - https://doh.pub/dns-query#disable-qtype-65=true
+    +.download.pytorch.org:
+    - https://dns.alidns.com/dns-query#disable-qtype-65=true
+    - https://doh.pub/dns-query#disable-qtype-65=true
 sniffer:
   enable: true
   parse-pure-ip: true
